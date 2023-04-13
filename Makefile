@@ -3,20 +3,28 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jenny <jenny@student.42.fr>                +#+  +:+       +#+         #
+#    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/29 16:24:17 by jede-ara          #+#    #+#              #
-#    Updated: 2023/04/13 14:17:52 by jenny            ###   ########.fr        #
+#    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
+#    Updated: 2023/04/13 21:34:25 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = swap_a.c swap_b.c sa_sb.c rotate_a.c ft_lstaddback.c ft_lstnew.c
-
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Werror -Wextra 
 
-OBJ = $(SRC:.c=.o)
+SRC = operations/swap_a.c \
+		operations/swap_b.c \
+		operations/sa_sb.c \
+		operations/rotate_a.c \
+		operations/rotate_b.c \
+		operations/ra_rb.c \
+		operations_utils/add_back.c \
+		operations_utils/ft_lstnew.c \
+		push_swap.c
+		
+OBJ = $(SRC:%.c=%.o)
 
 GREEN		:=	\033[1;32m
 RED			:=	\033[1;31m
@@ -25,21 +33,18 @@ BOLD		:=	\033[1;1m
 
 all: $(NAME)
 
-%.o: %.c
-	@cc $(CFLAGS) -c $< -o $@
-	@echo "$(GREEN) [OK] Build completed.$(BOLD)"
-
-
 $(NAME): $(OBJ)
-		@ar rc $(NAME) $(OBJ)
-		@echo "$(GREEN)[Success] Done the compilation Push swap.$(BOLD)"
+	@echo "$(GREEN) [Success] Push_swap compilation.$(BOLD)"
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@echo "$(GREEN) [Success] ./push_swap created.$(BOLD)"
+
 clean:
-	@rm -f $(OBJ)
-	@echo "$(RED)[Deleting] Object files deleted.$(BOLD)"
+	@rm -rf $(OBJ)
+	@echo "$(RED) [Deleting] object files deleted.$(BOLD)"
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "$(RED)[Deleting] .a deleted.$(BOLD)"
+	@rm -rf $(NAME) $(OBJ)
+	@echo "$(RED) [Deleting] .a deleted.$(BOLD)"
 
 re: fclean all
 
