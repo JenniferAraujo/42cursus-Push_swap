@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/04/13 21:34:25 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/04/14 15:23:50 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,11 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Werror -Wextra 
 
-SRC = operations/swap_a.c \
-		operations/swap_b.c \
-		operations/sa_sb.c \
-		operations/rotate_a.c \
-		operations/rotate_b.c \
-		operations/ra_rb.c \
-		operations_utils/add_back.c \
-		operations_utils/ft_lstnew.c \
+SRC = operations/swap.c \
+		operations/rotate.c \
+		operations/reverse_rotate.c \
+		operations/push.c \
+		operations_utils/operations_utils.c \
 		push_swap.c
 		
 OBJ = $(SRC:%.c=%.o)
@@ -29,7 +26,6 @@ OBJ = $(SRC:%.c=%.o)
 GREEN		:=	\033[1;32m
 RED			:=	\033[1;31m
 WHITE		:=	\033[1;37m
-BOLD		:=	\033[1;1m
 
 all: $(NAME)
 

@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra_rb.c                                            :+:      :+:    :+:   */
+/*   operations_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 16:38:45 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/13 17:49:46 by jede-ara         ###   ########.fr       */
+/*   Created: 2023/04/14 13:28:42 by jede-ara          #+#    #+#             */
+/*   Updated: 2023/04/14 13:30:03 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-//Faz o rotate_a e rotate_b ao mesmo tempo
-void	ra_rb(t_stack **list_a, t_stack **list_b)
+t_stack	*ft_lstnew(int content)
 {
-	rotate_a(list_a, 0);
-	rotate_b(list_b, 0);
-	write(1, "rr\n", 3);
+	t_stack	*node;
+
+	node = (t_stack *) malloc (sizeof(t_stack));
+	if (!node)
+		return (0);
+	node->value = content;
+	node->next = NULL;
+	return (node);
+}
+
+void	add_back(t_stack **head, t_stack *new)
+{
+	t_stack	*current;
+
+	if (*head == NULL)
+		*head = new;
+	else
+	{
+		current = *head;
+		while (current->next != NULL)
+			current = current->next;
+		current->next = new;
+	}
 }
