@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   validations.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/13 17:50:57 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/18 10:39:37 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-- The stack a contains a random amount of negative and/or positive numbers which cannot be duplicated.
-- The stack b is empty.
+- Não pode ter número duplicado 
+- A lista b tem que estar vazia
