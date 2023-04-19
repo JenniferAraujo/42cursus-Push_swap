@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:24:55 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/14 15:03:46 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:41:58 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	swap_a(t_stack **list_a, int flag)
 	t_stack	*tmp;
 
 	if (list_a && (*list_a)->next != NULL) //verifica se a list_a existe e possui pelo menos dois elementos
-	{	
+	{
 		tmp = (*list_a)->next; //armazena o segundo elemento da pilha 'list_a' na variável 'tmp'
 		(*list_a)->next = tmp->next;//atualiza o ponteiro 'next' do primeiro elemento para apontar para o terceiro elemento da pilha.
 		tmp->next = *list_a; //atualiza o ponteiro 'next' do segundo elemento para apontar para o primeiro elemento da pilha.

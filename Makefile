@@ -6,13 +6,13 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/04/14 15:23:50 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/04/19 19:49:29 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -g
 
 SRC = operations/swap.c \
 		operations/rotate.c \

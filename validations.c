@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validations.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/18 10:39:37 by jenny            ###   ########.fr       */
+/*   Updated: 2023/04/19 19:49:17 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,6 @@
 
 - Não pode ter número duplicado 
 - A lista b tem que estar vazia
+- Ver se e um numero 
+- Se e o minimo numero e maximo 
+- ver se ja esta ordenado

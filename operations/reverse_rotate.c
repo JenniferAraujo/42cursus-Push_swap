@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:34:09 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/18 10:29:08 by jenny            ###   ########.fr       */
+/*   Updated: 2023/04/18 15:15:38 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	reverse_rotate_a(t_stack **list_a, int flag)
 
 	if ((*list_a)->next == NULL)// Verifica se a lista tem pelo menos dois elementos
 		return ;
-
 	
 	// Encontra o último nó da lista e cria um novo nó com o valor dele
 	tmp = *list_a;
