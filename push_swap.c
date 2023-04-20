@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:32 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/19 19:49:05 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:31:45 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,14 @@ int	main(int ac, char **av)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
-	if (ac < 2)
-		return (0);
 	stack_a = ft_lstnew(atoi(av[1]));
 	stack_b = NULL;
+	if (ac < 2)
+		return (0);
+	/*if (stack_a == NULL)
+	{
+		write(1, "Stack A is empty\n", 17);
+	}*/
 	add_back(&stack_a, ft_lstnew(atoi(av[2])));
 	add_back(&stack_a, ft_lstnew(atoi(av[3])));
 	
