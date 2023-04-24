@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:06 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/24 15:55:12 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/24 20:39:20 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ void	push_a(t_stack **list_a, t_stack **list_b);
 void	push_b(t_stack **list_a, t_stack **list_b);
 
 /* INIT */
+void create_list(t_stack **list, int argc, char *argv);
+int find_index(t_stack *list, int value);
+int stack_size(t_stack *list);
+
 
 /* UTILS */
 void	add_back(t_stack **head, t_stack *new);

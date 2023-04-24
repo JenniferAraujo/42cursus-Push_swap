@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
+#    By: jenny <jenny@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/04/24 15:58:26 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/04/24 20:26:37 by jenny            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,9 @@ SRC = operations/swap.c \
 		checks/args_validations.c \
 		checks/free.c \
 		checks/ft_error.c \
+		init/for_list.c \
+		init/algoritm.c \
+		init/create_stack.c \
 		push_swap.c
 		
 OBJ = $(SRC:%.c=%.o)
