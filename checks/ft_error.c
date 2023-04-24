@@ -6,15 +6,15 @@
 /*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 13:06:21 by jenny             #+#    #+#             */
-/*   Updated: 2023/04/21 13:16:02 by jenny            ###   ########.fr       */
+/*   Updated: 2023/04/24 15:09:20 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_error(char *c, t_stack *stack)
+void	ft_error(t_stack *stack)
 {
-	printf("Something is wrong!\n", c);
-    free_stack(stack);
+	write(1, "Something is wrong!\n", 20);
+    free_stack(&stack);
 	exit(0);
 }

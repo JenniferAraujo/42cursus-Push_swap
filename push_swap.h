@@ -6,7 +6,7 @@
 /*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:06 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/24 12:49:44 by jenny            ###   ########.fr       */
+/*   Updated: 2023/04/24 15:11:32 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 typedef struct	s_stack
 {
 	int	value;
 	int	flag;
+	int	number;
 	struct s_stack *next;
 }							t_stack;
 
@@ -37,17 +39,20 @@ void	rrr(t_stack **list_a, t_stack **list_b);
 void	push_a(t_stack **list_a, t_stack **list_b);
 void	push_b(t_stack **list_a, t_stack **list_b);
 
-/* UTILS FOR OPERATIONS */
+/* UTILS */
 void	add_back(t_stack **head, t_stack *new);
 t_stack	*ft_lstnew(int content);
-
+int	ft_atoi(const char *str);
 
 /* VALIDATIONS*/
-
+void is_int(long long number, t_stack *list);
+int check_number(t_stack *node);
+int	double_number(t_stack *stack);
+int is_ordered(t_stack *list_a);
 
 /* END */
 void	free_stack(t_stack **stack);
-void	ft_error(char *c, t_stack *stack);
+void	ft_error(t_stack *stack);
 
 
 #endif

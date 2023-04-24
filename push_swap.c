@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:32 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/20 19:31:45 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:14:43 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ void	print_list(t_stack **head)
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b;
+	//t_stack	*stack_b;
 
 	stack_a = ft_lstnew(atoi(av[1]));
-	stack_b = NULL;
+	//stack_b = NULL;
 	if (ac < 2)
 		return (0);
 	/*if (stack_a == NULL)
