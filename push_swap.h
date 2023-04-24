@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:06 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/19 19:49:09 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/24 12:49:44 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,14 @@ void	push_b(t_stack **list_a, t_stack **list_b);
 /* UTILS FOR OPERATIONS */
 void	add_back(t_stack **head, t_stack *new);
 t_stack	*ft_lstnew(int content);
+
+
+/* VALIDATIONS*/
+
+
+/* END */
+void	free_stack(t_stack **stack);
+void	ft_error(char *c, t_stack *stack);
+
 
 #endif
