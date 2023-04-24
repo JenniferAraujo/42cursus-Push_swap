@@ -1,20 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   create_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 16:01:45 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/24 16:05:23 by jede-ara         ###   ########.fr       */
+/*   Created: 2023/04/24 16:02:49 by jede-ara          #+#    #+#             */
+/*   Updated: 2023/04/24 18:45:49 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_error(t_stack *stack)
+t_stack	*createList() 
 {
-	write(1, "Something is wrong!\n", 20);
-    free_stack(&stack);
-	exit(0);
+	int	num;
+	
+     t_stack *new_node = ft_lstnew(num);
+      
+
+
+}
+
+
+
+
+
+void printList(t_stack *node) {
+    while (node != NULL) {
+        printf("%d ", node->value);
+        node = node->next;
+    }
+}
+
+int main() {
+    t_stack *head = createList();
+
+    printf("A lista encadeada criada a partir da sequência é:\n");
+    printList(head);
+
+    return 0;
 }
