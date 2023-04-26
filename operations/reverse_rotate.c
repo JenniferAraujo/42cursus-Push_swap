@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:34:09 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/18 15:15:38 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:42:43 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,16 @@
 //Desloca para baixo todos os elementos da pilha a em 1. O último elemento torna-se o primeiro.
 void	reverse_rotate_a(t_stack **list_a, int flag)
 {
-	t_stack	*tmp; //ponteiros para os nós da lista
+	t_stack	*tmp;
 	t_stack	*new;
 
-	if ((*list_a)->next == NULL)// Verifica se a lista tem pelo menos dois elementos
+	if ((*list_a)->next == NULL)
 		return ;
-	
-	// Encontra o último nó da lista e cria um novo nó com o valor dele
 	tmp = *list_a;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	new = ft_lstnew(tmp->value);
 	new->flag = tmp->flag;
-
-	// Remove o último nó da lista original
 	tmp = *list_a;
 	while (tmp->next != NULL)
 	{
@@ -40,7 +36,6 @@ void	reverse_rotate_a(t_stack **list_a, int flag)
 		else
 			tmp = tmp->next;
 	}
-	// adiciona o novo nó no final da lista
 	add_back(&new, *list_a);
 	*list_a = new;
 	if (flag == 1)

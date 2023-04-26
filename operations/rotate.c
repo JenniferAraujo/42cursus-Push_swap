@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:48 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/19 19:49:22 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:43:09 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
 
-	if ((*list_a)->next == NULL) //verique se a lista tem apenas um elemento ou está vazia
+	if ((*list_a)->next == NULL)
 		return ;
-	tmp = (*list_a)->next; //atribui o segundo elemento da lista para tmp
-	(*list_a)->next = NULL; //define o próximo elemento do primeiro nó como NULL	 
-	add_back(&tmp, *list_a); //o primeiro nó é adicionado ao final da lista
-	*list_a = tmp; //o ponteiro da lista é atualizado para apontar para o novo primeiro nó (o segundo nó original)
-	if (flag == 1) //se flag for 1 indica que a operação foi realizada com sucesso e então print ra
+	tmp = (*list_a)->next;
+	(*list_a)->next = NULL;	 
+	add_back(&tmp, *list_a);
+	*list_a = tmp;
+	if (flag == 1)
 		write(1, "ra\n", 3);
 }
 

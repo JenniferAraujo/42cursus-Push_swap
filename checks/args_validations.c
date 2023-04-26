@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/24 15:53:48 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:39:40 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 void is_int(long long number, t_stack *stack) 
 {
     if (number > INT_MAX || number < INT_MIN)
-        ft_error(stack);
+        ft_error("Error", stack);
 }
 
 int check_number(t_stack *node)
 {
-    int c;
+    int str;
     
-    c = node->value; 
+    str = node->value; 
     
-    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c == '-' || c == '+') || (c == ' ' || c == '\t'))
+    if  (str == '-' || str == '+')
+        str++;
+    if ((str >= 65 && str <= 90) || (str >= 97 && str <= 122) || (str == ' ' || str == '\t'))
     {
-        if ((c >= 48) && (c <= 57)) 
+        if ((str >= 48) && (str <= 57)) 
             return (1);
         else
             return (0);
@@ -56,18 +58,17 @@ int	double_number(t_stack *stack)
 int is_ordered(t_stack *list_a)
 {
     if (!list_a) 
-        return 1; // Se a pilha estiver vazia, ela é considerada ordenada, então retornamos 1
+        return (1);
+    int prev_num = list_a->number;
+    t_stack *tail = list_a->next;
 
-    int prev_num = list_a->number; // Inicializa a variável prev_num com o valor do primeiro elemento da pilha
-    t_stack *tail = list_a->next; // Criamos um ponteiro para a cauda, apontando para o segundo elemento da pilha
-
-    while (tail && tail->number > prev_num) // Enquanto a cauda não for nula e o valor atual for maior que o valor anterior
+    while (tail && tail->number > prev_num)
     {
-        prev_num = tail->number; // Atualiza a variável prev_num com o valor atual
-        tail = tail->next; // Avança o ponteiro da cauda para o próximo elemento
+        prev_num = tail->number;
+        tail = tail->next;
     }
-    if (!tail) // Se a cauda estiver vazia, a pilha está ordenada, então retornamos 1
-        return 1;
+    if (!tail)
+        return (1);
     else 
-        return 0; // Caso contrário, a pilha não está ordenada, então retornamos 0
+        return (0);
 }

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 16:02:34 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:29:05 by jede-ara         ###   ########.fr       */
+/*   Created: 2022/11/02 14:02:22 by jede-ara          #+#    #+#             */
+/*   Updated: 2022/11/08 14:26:33 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+/*
+	DESCRIÇÃO: bzero() apaga os dados nos n bytes da memória começando no local
+	apontado por s, escrevendo zeros(bytes contendo '\0') para essa área.
+*/
+#include "libft.h"
 
-int main(int ac, char **av)
+void	ft_bzero(void *s, size_t n)
 {
-    t_stack *list = NULL;
-
-    if (ac < 2)
-        ft_error("Error\n No list to sort.\n", list);
-    create_list(&list, ac, av);
-    print_list(&list);
-    return (0);
+	ft_memset(s, '\0', n);
 }
+/*#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+int	main(void)
+{
+    char buffer[10] = "Oliveira";
+
+    ft_bzero(buffer, 10);
+    printf("%s",buffer);
+}*/

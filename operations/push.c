@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:35:37 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/18 10:28:55 by jenny            ###   ########.fr       */
+/*   Updated: 2023/04/26 20:42:03 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	push_a(t_stack **list_a, t_stack **list_b)
 {
 	t_stack	*tmp;
 
-	if (*list_b) //verifica se a pilha B não está vazia
+	if (*list_b)
 	{
-		tmp = (*list_b)->next; //armazena o próximo nó da pilha B em tmp
-		(*list_b)->next = *list_a; //conecta o nó atual da pilha B à pilha A
-		*list_a = *list_b; //define o início da pilha A para o nó atual da pilha B
-		*list_b = tmp;//define o início da pilha B para o próximo nó
+		tmp = (*list_b)->next;
+		(*list_b)->next = *list_a;
+		*list_a = *list_b;
+		*list_b = tmp;
 		write(1, "pa\n", 3);
 	}
 }

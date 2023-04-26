@@ -1,14 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algoritm.c                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 20:03:33 by jenny             #+#    #+#             */
-/*   Updated: 2023/04/26 20:40:23 by jede-ara         ###   ########.fr       */
+/*   Created: 2022/12/02 12:07:10 by jede-ara          #+#    #+#             */
+/*   Updated: 2022/12/02 17:06:17 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
+/*
+	DESCRIÇÃO: putchar() grava um caractere especificado na unidade de saída
+	fornecida.
+*/
+
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   for_list.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 20:01:45 by jenny             #+#    #+#             */
-/*   Updated: 2023/04/24 20:04:37 by jenny            ###   ########.fr       */
+/*   Created: 2023/04/26 15:28:31 by jede-ara          #+#    #+#             */
+/*   Updated: 2023/04/26 20:41:11 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,71 @@
 // Retorna o índice (posição) do elemento na lista
 int find_index(t_stack *list, int value)
 {
-    int index = 0;
+    int index;
+    
+    index = 0;
     while (list != NULL)
     {
         if (list->value == value)
-            return index;
+            return (index);
         list = list->next;
         index++;
     }
-    return -1; // Se não encontrou o valor na lista
+    return (0);
 }
 
 // Retorna o tamanho da lista
 int stack_size(t_stack *list)
 {
-    int size = 0;
+    int size;
+    
+    size = 0;
     while (list != NULL)
     {
         size++;
         list = list->next;
     }
-    return size;
+    return (size);
+}
+
+//encontra o menor numero em uma stack
+int smallest_number(t_stack *node)
+{
+    int small;
+    
+    small = node->value;
+    t_stack *current = node->next;
+    if (node == NULL)
+    {
+        printf("Lista vazia.");
+        return (0);
+    }
+    while (current != NULL) 
+    {
+        if (current->value < small) 
+        small = current->value;
+    current = current->next;
+    }
+    return (small);
+}
+
+//encontra o maior numero em uma stack
+int biggest_number(t_stack *node)
+{
+    int big;
+    
+    big = node->value;
+    t_stack *current = node->next;
+    if (node == NULL) 
+    {
+        ft_printf("Lista vazia.");
+        return (0);
+    }
+    while (current != NULL) 
+    {
+        if (current->value > big)
+            big = current->value;
+    current = current->next;
+    }
+    return (big);
 }

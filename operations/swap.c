@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:24:55 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/18 15:41:58 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:43:59 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	swap_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
 
-	if (list_a && (*list_a)->next != NULL) //verifica se a list_a existe e possui pelo menos dois elementos
+	if (list_a && (*list_a)->next != NULL)
 	{
-		tmp = (*list_a)->next; //armazena o segundo elemento da pilha 'list_a' na variável 'tmp'
-		(*list_a)->next = tmp->next;//atualiza o ponteiro 'next' do primeiro elemento para apontar para o terceiro elemento da pilha.
-		tmp->next = *list_a; //atualiza o ponteiro 'next' do segundo elemento para apontar para o primeiro elemento da pilha.
-		*list_a = tmp; //atualiza o ponteiro da pilha 'list_a' para apontar para o elemento armazenado em 'tmp'
+		tmp = (*list_a)->next;
+		(*list_a)->next = tmp->next;
+		tmp->next = *list_a;
+		*list_a = tmp;
 	}
-	if (flag == 1) //Se flag for 1 indica que a operação foi realizada com sucesso e então print sa
+	if (flag == 1)
 		write(1, "sa\n", 3);
 }
 
@@ -33,14 +33,14 @@ void	swap_b(t_stack **list_b, int flag)
 {
 	t_stack	*tmp;
 
-	if (list_b && (*list_b)->next != NULL) //se 'list_b' existe e possui pelo menos dois elementos.
+	if (list_b && (*list_b)->next != NULL)
 	{
-		tmp = (*list_b)->next; //armazena o segundo elemento da pilha 'list_b' na variável 'tmp'.
-		(*list_b)->next = tmp->next; //atualiza o ponteiro 'next' do primeiro elemento para apontar para o terceiro elemento da pilha.
-		tmp->next = *list_b; //atualiza o ponteiro 'next' do segundo elemento para apontar para o primeiro elemento da pilha.
-		*list_b = tmp; //atualiza o ponteiro da pilha 'list_b' para apontar para o elemento armazenado em 'tmp'
+		tmp = (*list_b)->next;
+		(*list_b)->next = tmp->next;
+		tmp->next = *list_b;
+		*list_b = tmp;
 	}
-	if (flag == 1) //Se flag for 1 indica que a operação foi realizada com sucesso e então print sb
+	if (flag == 1)
 		write(1, "sb\n", 3);
 }
 
