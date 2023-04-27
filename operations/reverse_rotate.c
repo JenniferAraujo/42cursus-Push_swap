@@ -6,13 +6,14 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:34:09 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:42:43 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:58:42 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-//Desloca para baixo todos os elementos da pilha a em 1. O último elemento torna-se o primeiro.
+/*Desloca para baixo todos os elementos da pilha a em 1. O último elemento
+torna-se o primeiro.*/
 void	reverse_rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
@@ -44,20 +45,20 @@ void	reverse_rotate_a(t_stack **list_a, int flag)
 
 void	reverse_rotate_b(t_stack **list_b, int flag)
 {
-	t_stack *tmp;
-	t_stack *new;
+	t_stack	*tmp;
+	t_stack	*new;
 
 	if ((*list_b)->next == NULL)
 		return ;
 	tmp = *list_b;
-	while(tmp->next != NULL)
+	while (tmp->next != NULL)
 		tmp = tmp->next;
 	new = ft_lstnew(tmp->value);
 	new->flag = tmp->flag;
 	tmp = *list_b;
-	while(tmp->next != NULL)
+	while (tmp->next != NULL)
 	{
-		if((tmp->next)->next == NULL)
+		if ((tmp->next)->next == NULL)
 		{
 			free(tmp->next);
 			tmp->next = NULL;
@@ -67,7 +68,7 @@ void	reverse_rotate_b(t_stack **list_b, int flag)
 	}
 	add_back(&new, *list_b);
 	*list_b = new;
-	if(flag == 1)
+	if (flag == 1)
 		write(1, "rrb\n", 4);
 }
 

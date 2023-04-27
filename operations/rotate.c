@@ -6,13 +6,14 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:48 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:43:09 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:59:11 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-//desloca todos os elementos da pilha 'a' para cima em 1. O primeiro elemento se torna o último
+/*desloca todos os elementos da pilha 'a' para cima em 1. O primeiro elemento
+se torna o último*/
 void	rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
@@ -20,14 +21,15 @@ void	rotate_a(t_stack **list_a, int flag)
 	if ((*list_a)->next == NULL)
 		return ;
 	tmp = (*list_a)->next;
-	(*list_a)->next = NULL;	 
+	(*list_a)->next = NULL;
 	add_back(&tmp, *list_a);
 	*list_a = tmp;
 	if (flag == 1)
 		write(1, "ra\n", 3);
 }
 
-//desloca todos os elementos da pilha 'b' para cima em 1. O primeiro elemento se torna o último
+/*desloca todos os elementos da pilha 'b' para cima em 1. O primeiro elemento
+se torna o último*/
 void	rotate_b(t_stack **list_b, int flag)
 {
 	t_stack	*tmp;

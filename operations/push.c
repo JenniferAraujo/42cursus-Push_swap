@@ -6,13 +6,14 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:35:37 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:42:03 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:59:50 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-//Pegue o primeiro elemento no topo de b e coloque-o no topo de a. Não faça nada se b estiver vazio
+/*Pegue o primeiro elemento no topo de b e coloque-o no topo de a. Não faça
+nada se b estiver vazio*/
 void	push_a(t_stack **list_a, t_stack **list_b)
 {
 	t_stack	*tmp;

@@ -94,28 +94,27 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-
 /*
-***********************************************************************************
+*********************************************************************************
 				GET NEXT LINE 
 */
-char	*ft_read(int fd, char *src);
-char	*get_next_line(int fd);
-char	*ft_chr(char *s1, int c);
-char	*ft_join(char *s, char *buff);
-char	*ft_get_line(char *c);
-char	*ft_new_line(char *s);
+char		*ft_read(int fd, char *src);
+char		*get_next_line(int fd);
+char		*ft_chr(char *s1, int c);
+char		*ft_join(char *s, char *buff);
+char		*ft_get_line(char *c);
+char		*ft_new_line(char *s);
 
 /*
-**************************************************************************************
+********************************************************************************
 					PRINTF
 */
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_print_hex(unsigned int n, int c);
-int	ft_print_pointer(unsigned long long ptr);
-int	ft_print_unsig(unsigned int n, int fd);
-int	ft_putnbr(int n);
-int	ft_printf(const char *format, ...);
+int			ft_putchar(char c);
+int			t_putstr(char *s);
+int			ft_print_hex(unsigned int n, int c);
+int			ft_print_pointer(unsigned long long ptr);
+int			ft_print_unsig(unsigned int n, int fd);
+int			ft_putnbr(int n);
+int			ft_printf(const char *format, ...);
 
 #endif

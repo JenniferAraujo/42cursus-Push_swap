@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:47:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:56:10 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,8 @@ int	count_op_a(t_stack *list_a)
 
 int	count_op_b(t_stack *list_b)
 {
+	int	i;
+
+	i = 0;
 	
 }

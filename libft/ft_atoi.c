@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	s;
 	int	res;
-	
+
 	i = 0;
 	s = 1;
 	res = 0;

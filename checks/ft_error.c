@@ -15,6 +15,6 @@
 void	ft_error(char *c, t_stack *stack)
 {
 	ft_printf("Error\nSomething is wrong!\n%s\n", c);
-    free_stack(&stack);
+	free_stack(&stack);
 	exit(0);
 }

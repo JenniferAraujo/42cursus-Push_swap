@@ -12,28 +12,28 @@
 
 #include "../push_swap.h"
 
-void create_list(t_stack **list, int ac, char **av) 
+void	create_list(t_stack **list, int ac, char **av)
 {
-    int i;
+	int	i;
 	int	number;
 
 	i = 1;
-    while (i < ac) 
-    {
+	while (i < ac)
+	{
 		number = ft_atoi(av[i]);
-        add_back(list, ft_lstnew(number));
+		add_back(list, ft_lstnew(number));
 		i++;
-    }
+	}
 }
 
 void	print_list(t_stack **head)
 {
-	t_stack *current;
+	t_stack	*current;
 
 	current = *head;
 	while (current != NULL)
 	{
-		ft_printf("%d\n", current->value);	
+		ft_printf("%d\n", current->value);
 		current = current->next;
 	}
 }

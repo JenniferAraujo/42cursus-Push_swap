@@ -38,4 +38,3 @@ void	add_back(t_stack **head, t_stack *new)
 		current->next = new;
 	}
 }
-
