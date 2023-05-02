@@ -6,24 +6,28 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/27 15:56:10 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:01:06 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	count_op_a(t_stack *list_a)
+//conta o numero de operacoes para ordenar a lista
+int	count_op(t_stack *num, int size, int *flag)
 {
-	int	i; 
+	int	number_elements;
+	int	half_len;
 
-	i = 0;
-	
-}
-
-int	count_op_b(t_stack *list_b)
-{
-	int	i;
-
-	i = 0;
-	
+	number_elements = num->value;
+	half_len = size / 2;
+	if (number_elements <= half_len)
+	{
+		*flag = 0;
+		return (number_elements);
+	}
+	else
+	{
+		*flag = 1;
+		return (size - number_elements - 1);
+	}
 }

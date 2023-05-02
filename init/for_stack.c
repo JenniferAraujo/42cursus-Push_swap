@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   for_list.c                                         :+:      :+:    :+:   */
+/*   for_stack.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:31 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:41:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:17:21 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	smallest_number(t_stack *node)
 	t_stack	*current;
 
 	small = node->value;
-	*current = node->next;
+	current = node->next;
 	if (node == NULL)
 	{
 		printf("Lista vazia.");
@@ -71,7 +71,7 @@ int	biggest_number(t_stack *node)
 	t_stack	*current;
 
 	big = node->value;
-	*current = node->next;
+	current = node->next;
 	if (node == NULL)
 	{
 		ft_printf("Lista vazia.");

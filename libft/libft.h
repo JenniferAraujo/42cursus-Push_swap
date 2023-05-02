@@ -110,7 +110,7 @@ char		*ft_new_line(char *s);
 					PRINTF
 */
 int			ft_putchar(char c);
-int			t_putstr(char *s);
+int			ft_putstr(char *s);
 int			ft_print_hex(unsigned int n, int c);
 int			ft_print_pointer(unsigned long long ptr);
 int			ft_print_unsig(unsigned int n, int fd);

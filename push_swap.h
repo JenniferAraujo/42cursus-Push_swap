@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/26 20:45:57 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:15:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int stack_size(t_stack *list);
 int smallest_number(t_stack *node);
 int biggest_number(t_stack *node);
 
+/* MOVES*/
+int	count_op(t_stack *num, int size, int *flag);
 
 /* UTILS */
 void	add_back(t_stack **head, t_stack *new);

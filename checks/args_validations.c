@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/27 15:57:07 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:22:00 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	is_ordered(t_stack *list_a)
 	if (!list_a)
 		return (1);
 	prev_num = list_a->number;
-	*tail = list_a->next;
+	tail = list_a->next;
 	while (tail && tail->number > prev_num)
 	{
 		prev_num = tail->number;
