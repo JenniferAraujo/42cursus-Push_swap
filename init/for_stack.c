@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:31 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/02 19:17:21 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/04 14:59:01 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,48 +40,4 @@ int	stack_size(t_stack *list)
 		list = list->next;
 	}
 	return (size);
-}
-
-//encontra o menor numero em uma stack
-int	smallest_number(t_stack *node)
-{
-	int		small;
-	t_stack	*current;
-
-	small = node->value;
-	current = node->next;
-	if (node == NULL)
-	{
-		printf("Lista vazia.");
-		return (0);
-	}
-	while (current != NULL)
-	{
-		if (current->value < small)
-			small = current->value;
-		current = current->next;
-	}
-	return (small);
-}
-
-//encontra o maior numero em uma stack
-int	biggest_number(t_stack *node)
-{
-	int		big;
-	t_stack	*current;
-
-	big = node->value;
-	current = node->next;
-	if (node == NULL)
-	{
-		ft_printf("Lista vazia.");
-		return (0);
-	}
-	while (current != NULL)
-	{
-		if (current->value > big)
-			big = current->value;
-		current = current->next;
-	}
-	return (big);
 }

@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/02 19:01:06 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:07:04 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ int	count_op(t_stack *num, int size, int *flag)
 		return (size - number_elements - 1);
 	}
 }
+

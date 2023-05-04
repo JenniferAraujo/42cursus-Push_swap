@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/02 18:59:52 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/05/04 19:28:12 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,12 @@ SRC = operations/swap.c \
 		checks/args_validations.c \
 		checks/free.c \
 		checks/ft_error.c \
+		checks/validations.c \
 		init/for_stack.c \
-		init/algoritm.c \
 		init/create_stack.c \
 		init/count_op.c \
+		init/bigger_numbers.c \
+		init/smaller_numbers.c \
 		push_swap.c
 		
 OBJ = $(SRC:%.c=%.o)

@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:35:37 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/27 15:59:50 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/04 14:14:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	push_a(t_stack **list_a, t_stack **list_b)
 		(*list_b)->next = *list_a;
 		*list_a = *list_b;
 		*list_b = tmp;
-		write(1, "pa\n", 3);
+		ft_printf("pa\n");
 	}
 }
 
@@ -38,6 +38,6 @@ void	push_b(t_stack **list_a, t_stack **list_b)
 		(*list_a)->next = *list_b;
 		*list_b = *list_a;
 		*list_a = tmp;
-		write(1, "pb\n", 3);
+		ft_printf("pb\n");
 	}
 }

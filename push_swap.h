@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/02 18:15:37 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:24:11 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,15 @@ void	push_a(t_stack **list_a, t_stack **list_b);
 void	push_b(t_stack **list_a, t_stack **list_b);
 
 /* INIT */
+void	start_validations(t_stack *list);
 void create_list(t_stack **list, int ac, char **av);
 void	print_list(t_stack **head);
 int find_index(t_stack *list, int value);
 int stack_size(t_stack *list);
 int smallest_number(t_stack *node);
 int biggest_number(t_stack *node);
+int	next_smallest(t_stack *node, int number_a);
+int	next_biggest(t_stack *node, int	number_a);
 
 /* MOVES*/
 int	count_op(t_stack *num, int size, int *flag);

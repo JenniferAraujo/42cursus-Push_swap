@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:34:09 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/27 15:58:42 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/04 14:15:26 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	reverse_rotate_a(t_stack **list_a, int flag)
 	add_back(&new, *list_a);
 	*list_a = new;
 	if (flag == 1)
-		write(1, "rra\n", 4);
+		ft_printf("rra\n");
 }
 
 void	reverse_rotate_b(t_stack **list_b, int flag)
@@ -69,12 +69,12 @@ void	reverse_rotate_b(t_stack **list_b, int flag)
 	add_back(&new, *list_b);
 	*list_b = new;
 	if (flag == 1)
-		write(1, "rrb\n", 4);
+		ft_printf("rrb\n");
 }
 
 void	rrr(t_stack **list_a, t_stack **list_b)
 {
 	reverse_rotate_a(list_a, 0);
 	reverse_rotate_b(list_b, 0);
-	write(1, "rrr\n", 4);
+	ft_printf("rrr\n");
 }

@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:48 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/04/27 15:59:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/04 14:16:12 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	rotate_a(t_stack **list_a, int flag)
 	add_back(&tmp, *list_a);
 	*list_a = tmp;
 	if (flag == 1)
-		write(1, "ra\n", 3);
+		ft_printf("ra\n");
 }
 
 /*desloca todos os elementos da pilha 'b' para cima em 1. O primeiro elemento
@@ -41,7 +41,7 @@ void	rotate_b(t_stack **list_b, int flag)
 	add_back(&tmp, *list_b);
 	*list_b = tmp;
 	if (flag == 1)
-		write(1, "rb\n", 3);
+		ft_printf("rb\n");
 }
 
 //Faz o rotate_a e rotate_b ao mesmo tempo
@@ -49,5 +49,5 @@ void	ra_rb(t_stack **list_a, t_stack **list_b)
 {
 	rotate_a(list_a, 0);
 	rotate_b(list_b, 0);
-	write(1, "rr\n", 3);
+	ft_printf("rr\n");
 }
