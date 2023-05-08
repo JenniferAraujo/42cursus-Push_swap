@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 19:24:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/08 21:12:36 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ typedef struct	s_stack
 }							t_stack;
 
 /* VALIDATIONS*/
-void is_int(long long number, t_stack *list);
-int check_number(t_stack *node);
+void	is_int(long long number, t_stack *list);
+int	check_number(t_stack *node);
 int	double_number(t_stack *stack);
-int is_ordered(t_stack *list_a);
+int	is_ordered(t_stack *list_a);
 
 /* OPERATIONS */
 void	swap_a(t_stack **list_a, int flag);
@@ -48,7 +48,7 @@ void	push_b(t_stack **list_a, t_stack **list_b);
 
 /* INIT */
 void	start_validations(t_stack *list);
-void create_list(t_stack **list, int ac, char **av);
+void	create_list(t_stack **list, int ac, char **av);
 void	print_list(t_stack **head);
 int find_index(t_stack *list, int value);
 int stack_size(t_stack *list);
@@ -57,8 +57,9 @@ int biggest_number(t_stack *node);
 int	next_smallest(t_stack *node, int number_a);
 int	next_biggest(t_stack *node, int	number_a);
 
-/* MOVES*/
+/* COSTS */
 int	count_op(t_stack *num, int size, int *flag);
+int count_stack_b(int nbr, t_stack *stack, int *flag);
 
 /* UTILS */
 void	add_back(t_stack **head, t_stack *new);

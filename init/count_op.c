@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 19:07:04 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/08 21:12:11 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,18 @@ int	count_op(t_stack *num, int size, int *flag)
 		return (size - number_elements - 1);
 	}
 }
+ 
+ //rever essa funcao
+int count_stack_b(int nbr, t_stack *stack, int *flag)
+{
+    t_stack *current = stack;
+    while (current != NULL && current->value != nbr)
+        current = current->next;
+    if (current == NULL || (nbr > biggest_number(stack) || nbr < smallest_number(stack)))
+        current = biggest_number(stack);
+    else
+        current = next_smallest(nbr, stack);
 
+    current->number = count_op(current, stack_size(stack), flag);
+    return (current->number);
+}
