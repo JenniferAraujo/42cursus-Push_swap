@@ -6,17 +6,18 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:58:15 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 20:40:13 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:26:59 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 //encontra o maior numero da stack
-int	biggest_number(t_stack *node)
+t_stack		*biggest_number(t_stack *node)
 {
 	int		big;
 	t_stack	*current;
+	t_stack *result;
 
 	big = node->value;
 	current = node->next;
@@ -28,17 +29,18 @@ int	biggest_number(t_stack *node)
 	while (current != NULL)
 	{
 		if (current->value > big)
-			big = current->value;
+			result = current;
 		current = current->next;
 	}
-	return (big);
+	return (result);
 }
 
 //encontra o proximo maior numero da stack
-int	next_biggest(t_stack *node, int	number_a)
+t_stack	*next_biggest(t_stack *node, int number_a)
 {
 	int		next_biggest;
 	t_stack	*current;
+	t_stack	*result;
 	
 	current = node;
 	if (current == NULL)
@@ -53,8 +55,8 @@ int	next_biggest(t_stack *node, int	number_a)
 	while(current != NULL)
 	{
 		if (current->value < next_biggest && current->value > number_a)
-			next_biggest = current->value;
+			result = current;
 		current = current->next;
 	}
-	return (next_biggest);
+	return (result);
 }

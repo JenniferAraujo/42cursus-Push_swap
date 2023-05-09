@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:35:37 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 14:14:37 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:54:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	push_a(t_stack **list_a, t_stack **list_b)
 		*list_b = tmp;
 		ft_printf("pa\n");
 	}
-}
+}  
 
 void	push_b(t_stack **list_a, t_stack **list_b)
 {

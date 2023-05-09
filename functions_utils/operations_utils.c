@@ -6,13 +6,13 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:02:16 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/02 18:29:51 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:38:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_stack	*ft_lstnew(int content)
+t_stack	*ft_lstnew(int content, int index)
 {
 	t_stack	*node;
 
@@ -20,6 +20,7 @@ t_stack	*ft_lstnew(int content)
 	if (!node)
 		return (0);
 	node->value = content;
+	node->index = index;
 	node->next = NULL;
 	return (node);
 }

@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/08 21:12:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/09 17:51:38 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,25 @@ int	count_op(t_stack *num, int size, int *flag)
 	}
 }
  
- //rever essa funcao
+ //para a stack b
 int count_stack_b(int nbr, t_stack *stack, int *flag)
 {
-    t_stack *current = stack;
+	int number_op;
+    t_stack *current;
+	t_stack *biggest;
+	t_stack *smallest;
+	
+	current = stack;
     while (current != NULL && current->value != nbr)
+	{
         current = current->next;
-    if (current == NULL || (nbr > biggest_number(stack) || nbr < smallest_number(stack)))
-        current = biggest_number(stack);
+	}
+	biggest = biggest_number(stack); 
+	smallest = smallest_number(stack);
+    if (current == NULL || (nbr > biggest->value || nbr < smallest->value))
+        current = biggest;
     else
-        current = next_smallest(nbr, stack);
-
-    current->number = count_op(current, stack_size(stack), flag);
-    return (current->number);
+        current = next_smallest(stack, nbr);
+    number_op = count_op(current, stack_size(stack), flag);
+    return (number_op);
 }

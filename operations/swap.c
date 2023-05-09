@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:24:55 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 14:16:56 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:22:08 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 //troca os 2 primeiros elementos no to[p da pilha 'a'
 void	swap_a(t_stack **list_a, int flag)
 {
-	t_stack	*tmp;
-
+	int	temp;
+	
 	if (list_a && (*list_a)->next != NULL)
 	{
-		tmp = (*list_a)->next;
-		(*list_a)->next = tmp->next;
-		tmp->next = *list_a;
-		*list_a = tmp;
+		temp = (*list_a)->value;
+		(*list_a)->value = (*list_a)->next->value;
+		(*list_a)->next->value = temp;
 	}
 	if (flag == 1)
 		ft_printf("sa\n");
@@ -31,17 +30,16 @@ void	swap_a(t_stack **list_a, int flag)
 //troca os 2 primeiros elementos no topo da pilha b.
 void	swap_b(t_stack **list_b, int flag)
 {
-	t_stack	*tmp;
-
+	int	temp;
+	
 	if (list_b && (*list_b)->next != NULL)
 	{
-		tmp = (*list_b)->next;
-		(*list_b)->next = tmp->next;
-		tmp->next = *list_b;
-		*list_b = tmp;
+		temp = (*list_b)->value;
+		(*list_b)->value = (*list_b)->next->value;
+		(*list_b)->next->value = temp;
 	}
 	if (flag == 1)
-		ft_printf("sb\n");
+		ft_printf("sa\n");
 }
 
 //Faz o swap_a e swap_b ao mesmo tempo

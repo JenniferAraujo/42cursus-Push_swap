@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/04 19:28:12 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/05/09 19:30:30 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = operations/swap.c \
 		operations/reverse_rotate.c \
 		operations/push.c \
 		functions_utils/operations_utils.c \
+		functions_utils/change_index.c \
 		checks/args_validations.c \
 		checks/free.c \
 		checks/ft_error.c \

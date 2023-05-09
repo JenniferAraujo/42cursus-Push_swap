@@ -6,17 +6,18 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 19:16:36 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 20:44:15 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:26:17 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 //encontra o menor numero em uma stack
-int	smallest_number(t_stack *node)
+t_stack	*smallest_number(t_stack *node)
 {
 	int		small;
 	t_stack	*current;
+	t_stack	*result;
 
 	small = node->value;
 	current = node->next;
@@ -28,17 +29,18 @@ int	smallest_number(t_stack *node)
 	while (current != NULL)
 	{
 		if (current->value < small)
-			small = current->value;
+			result = current;
 		current = current->next;
 	}
-	return (small);
+	return (result);
 }
 
 //encontra o proximo menor numero da lista A
-int	next_smallest(t_stack *first, int number_a)
+t_stack	*next_smallest(t_stack *first, int number_a)
 {
 	int		next_smallest;
 	t_stack	*current;
+	t_stack	*result;
 	
 	current = first;
 	if (current == NULL)
@@ -53,8 +55,8 @@ int	next_smallest(t_stack *first, int number_a)
 	while (current != NULL)
 	{
 		if (current->value > next_smallest && current->value < number_a)
-			next_smallest = current->value;
+			result = current;
 		current = current->next;
 	}
-	return (next_smallest);
+	return (result);
 }
