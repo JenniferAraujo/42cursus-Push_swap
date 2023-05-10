@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 15:17:53 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/10 18:55:53 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	double_number(t_stack *stack)
 		tmp = stack->next;
 		while (tmp)
 		{
-			if (stack->number == tmp->number)
+			if (stack->value == tmp->value)
 				return (1);
 			tmp = tmp->next;
 		}
@@ -62,11 +62,11 @@ int	is_ordered(t_stack *list_a)
 
 	if (!list_a)
 		return (1);
-	prev_num = list_a->number;
+	prev_num = list_a->value;
 	tail = list_a->next;
-	while (tail && tail->number > prev_num)
+	while (tail && tail->value > prev_num)
 	{
-		prev_num = tail->number;
+		prev_num = tail->value;
 		tail = tail->next;
 	}
 	if (!tail)

@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:38:48 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/04 14:16:12 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/10 21:02:18 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	rotate_a(t_stack **list_a, int flag)
 	(*list_a)->next = NULL;
 	add_back(&tmp, *list_a);
 	*list_a = tmp;
+	change_index_rotate(*list_a);
 	if (flag == 1)
 		ft_printf("ra\n");
 }
@@ -40,6 +41,7 @@ void	rotate_b(t_stack **list_b, int flag)
 	(*list_b)->next = NULL;
 	add_back(&tmp, *list_b);
 	*list_b = tmp;
+	change_index_rotate(*list_b);
 	if (flag == 1)
 		ft_printf("rb\n");
 }

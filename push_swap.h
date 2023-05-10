@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/09 19:31:19 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/10 21:02:35 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ void		add_back(t_stack **head, t_stack *new);
 t_stack	*ft_lstnew(int content, int index);
 void	change_index_positive(t_stack *stack);
 void	change_index_negative(t_stack *stack);
+void	change_index_rotate(t_stack *stack);
+
 
 /* END */
 void	free_stack(t_stack **stack);
