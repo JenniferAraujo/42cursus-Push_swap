@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/10 21:02:35 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:58:58 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int		stack_size(t_stack *list);
 /* COSTS */
 int		count_op(t_stack *num, int size, int *flag);
 int		count_stack_b(int nbr, t_stack *stack, int *flag);
+int		count_stack(t_stack *current_a, t_stack *list_a, int size);
 t_stack	*smallest_number(t_stack *node);
 t_stack	*biggest_number(t_stack *node);
 t_stack	*next_smallest(t_stack *first, int number_a);
