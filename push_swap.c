@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:02:34 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/15 17:00:40 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:06:26 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int main(int ac, char **av)
     printf("criei a lista");
     count_op = count_stack(current, list, 5);
     print_list(&list);
-   printf("Numero de operacoes: %d\n", count_op);
+    printf("Numero de operacoes: %d\n", count_op);
     return (0);
 }
