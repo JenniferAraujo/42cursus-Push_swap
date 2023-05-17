@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:02:34 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/17 18:06:26 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:44:54 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 int main(int ac, char **av)
 {
     t_stack *list = NULL;
-    t_stack *current = NULL;
-   //int flag = 0;
-   int count_op;
+    t_stack *list_b = NULL;
+    t_stack *moves; 
+    
+    moves = saving_moves(list, list_b);
 
-    //current = list;
     if (ac < 2)
         ft_error("Error\n No list to sort.\n", list);
     //start_validations(list);
     create_list(&list, ac, av);
-    printf("criei a lista");
-    count_op = count_stack(current, list, 5);
+    
     print_list(&list);
-    printf("Numero de operacoes: %d\n", count_op);
+       
+    if (moves != NULL)
+        printf("Elemento mais barato: %d\n", moves->value);
+
     return (0);
 }

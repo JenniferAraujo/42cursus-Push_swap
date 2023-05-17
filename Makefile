@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/09 19:30:30 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/05/17 18:23:52 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC = operations/swap.c \
 		init/count_op.c \
 		init/bigger_numbers.c \
 		init/smaller_numbers.c \
+		init/saving_moves.c \
 		push_swap.c
 		
 OBJ = $(SRC:%.c=%.o)

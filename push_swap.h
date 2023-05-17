@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/15 15:58:58 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:31:39 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ t_stack	*smallest_number(t_stack *node);
 t_stack	*biggest_number(t_stack *node);
 t_stack	*next_smallest(t_stack *first, int number_a);
 t_stack	*next_biggest(t_stack *node, int number_a);
+t_stack	*saving_moves(t_stack *stack_a, t_stack *stack_b);
 
 /* UTILS */
 void		add_back(t_stack **head, t_stack *new);
