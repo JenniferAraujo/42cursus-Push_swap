@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/17 20:15:02 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/22 11:51:28 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,3 @@ int	count_stack(t_stack *current_a, t_stack *list_a, int size)
 	}
 	return (operations_a + operations_b);
 }
-912 348 545
