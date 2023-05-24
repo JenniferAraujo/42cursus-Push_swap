@@ -13,7 +13,7 @@
 #include "../push_swap.h"
 
 //troca os 2 primeiros elementos no to[p da pilha 'a'
-void	swap_a(t_stack **list_a, int flag)
+void	swap_a(t_stack **list_a)
 {
 	int	temp;
 	
@@ -22,13 +22,13 @@ void	swap_a(t_stack **list_a, int flag)
 		temp = (*list_a)->value;
 		(*list_a)->value = (*list_a)->next->value;
 		(*list_a)->next->value = temp;
-	}
-	if (flag == 1)
 		ft_printf("sa\n");
+	}
+	
 }
 
 //troca os 2 primeiros elementos no topo da pilha b.
-void	swap_b(t_stack **list_b, int flag)
+void	swap_b(t_stack **list_b)
 {
 	int	temp;
 	
@@ -37,15 +37,14 @@ void	swap_b(t_stack **list_b, int flag)
 		temp = (*list_b)->value;
 		(*list_b)->value = (*list_b)->next->value;
 		(*list_b)->next->value = temp;
-	}
-	if (flag == 1)
 		ft_printf("sa\n");
+	}
 }
 
 //Faz o swap_a e swap_b ao mesmo tempo
 void	sa_sb(t_stack **list_a, t_stack **list_b)
 {
-	swap_a(list_a, 0);
-	swap_b(list_b, 0);
+	swap_a(list_a);
+	swap_b(list_b);
 	ft_printf("ss\n");
 }

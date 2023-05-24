@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   for_stack.c                                        :+:      :+:    :+:   */
+/*   algoritm_2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/26 15:28:31 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/24 21:43:31 by jede-ara         ###   ########.fr       */
+/*   Created: 2023/05/24 18:43:40 by jede-ara          #+#    #+#             */
+/*   Updated: 2023/05/24 18:59:23 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// Retorna o índice (posição) do elemento na lista
-int	find_index(t_stack *list, int value)
+void	algoritm(t_stack **list_a, t_stack **list_b)
 {
-	int	index;
-
-	index = 0;
-	while (list != NULL)
+	/*while (stack_size(list_a) > 3)
 	{
-		if (list->value == value)
-			return (index);
-		list = list->next;
-		index++;
-	}
-	return (0);
-}
-
-// Retorna o tamanho da lista
-int	stack_size(t_stack *list)
-{
-	int	size;
-	t_stack *current;
-
-	current = list;
-	size = 0;
-	while (current != NULL)
+		find_element_with_less_operations(list_a, list_b);
+		push_b(&list_a, &list_b);
+	}*/
+	if (stack_size(*list_a) == 3 && !is_ordered(*list_a))
 	{
-		size++;
-		current = current->next;
+		ft_printf("entra aqui\n");
+		sorting_three(list_a);
 	}
-	return (size);
+	print_list(list_a);
+	//manda p stack a
+	//push_a(&list_a, &list_b);
+	//rotacao final da stack a
+	//if (stack_size(list_b) == 0)
+	//	return ;
+	//final, dps
 }

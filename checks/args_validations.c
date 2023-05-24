@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/10 18:55:53 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/24 21:38:27 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	is_int(long long number, t_stack *stack)
 {
 	if (number > INT_MAX || number < INT_MIN)
-		ft_error("Error\nIs not an integer", stack);
+		ft_error("Error\n", stack);
 }
 
 int	check_number(t_stack *node)
@@ -57,20 +57,18 @@ int	double_number(t_stack *stack)
 
 int	is_ordered(t_stack *list_a)
 {
-	t_stack	*tail;
-	int		prev_num;
+	int	num;
+	t_stack	*current;
 
-	if (!list_a)
-		return (1);
-	prev_num = list_a->value;
-	tail = list_a->next;
-	while (tail && tail->value > prev_num)
+	current = list_a;
+	num = current->value;
+	current = current->next;
+	while (current != NULL)
 	{
-		prev_num = tail->value;
-		tail = tail->next;
+		if (num > current->value)
+			return (1);
+		num = current->value;
+		current = current->next;
 	}
-	if (!tail)
-		return (1);
-	else
-		return (0);
+	return (0);
 }

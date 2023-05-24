@@ -14,7 +14,7 @@
 
 /*Desloca para baixo todos os elementos da pilha a em 1. O último elemento
 torna-se o primeiro.*/
-void	reverse_rotate_a(t_stack **list_a, int flag)
+void	reverse_rotate_a(t_stack **list_a)
 {
 	t_stack	*tmp;
 	t_stack	*new;
@@ -39,12 +39,11 @@ void	reverse_rotate_a(t_stack **list_a, int flag)
 	}
 	add_back(&new, *list_a);
 	*list_a = new;
-    change_index_positive(*list_a);
-	if (flag == 1)
-		ft_printf("rra\n");
+	change_index_positive(*list_a);
+	ft_printf("rra\n");
 }
 
-void	reverse_rotate_b(t_stack **list_b, int flag)
+void	reverse_rotate_b(t_stack **list_b)
 {
 	t_stack	*tmp;
 	t_stack	*new;
@@ -70,13 +69,12 @@ void	reverse_rotate_b(t_stack **list_b, int flag)
 	add_back(&new, *list_b);
 	*list_b = new;
 	change_index_positive(*list_b);
-	if (flag == 1)
-		ft_printf("rrb\n");
+	ft_printf("rrb\n");
 }
 
 void	rrr(t_stack **list_a, t_stack **list_b)
 {
-	reverse_rotate_a(list_a, 0);
-	reverse_rotate_b(list_b, 0);
+	reverse_rotate_a(list_a);
+	reverse_rotate_b(list_b);
 	ft_printf("rrr\n");
 }

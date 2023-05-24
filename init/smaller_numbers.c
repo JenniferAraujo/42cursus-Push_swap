@@ -24,7 +24,7 @@ t_stack	*smallest_number(t_stack *node)
 	current = node->next;
 	if (node == NULL)
 	{
-		ft_printf("Error\nEmpty list");
+		ft_printf("Error\n");
 		return (0);
 	}
 	while (current != NULL)
@@ -46,7 +46,7 @@ t_stack	*next_smallest(t_stack *first, int number_a)
 	current = first;
 	if (current == NULL)
 	{
-		ft_printf("Error\nEmpty list");
+		ft_printf("Error\n");
 		return (0);
 	}
 	while (current->value > number_a)

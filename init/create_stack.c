@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:26:12 by jenny             #+#    #+#             */
-/*   Updated: 2023/05/09 17:57:59 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/24 19:42:04 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	print_list(t_stack **head)
 	t_stack	*current;
 
 	current = *head;
+
 	while (current != NULL)
 	{
 		ft_printf("%d (%d)\n", current->value, current->index);
