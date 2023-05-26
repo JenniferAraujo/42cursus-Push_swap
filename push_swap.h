@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/24 20:09:32 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/26 19:09:13 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void		start_validations(t_stack *list);
 void		create_list(t_stack **list, int ac, char **av);
 void		print_list(t_stack **head);
 int		find_index(t_stack *list, int value);
-int		stack_size(t_stack *list);
+int	stack_size(t_stack **list);
 
 /* COSTS */
 int		count_op(t_stack *num, int size, int *flag);
@@ -61,12 +61,14 @@ t_stack	*smallest_number(t_stack *node);
 t_stack	*biggest_number(t_stack *node);
 t_stack	*next_smallest(t_stack *first, int number_a);
 t_stack	*next_biggest(t_stack *node, int number_a);
-t_stack	*find_element_with_less_operations(t_stack *stack_a, t_stack *stack_b);
+t_stack	*find_element_with_less_operations(t_stack **stack_a, t_stack **stack_b);
 
 /*	MOVES */
 void		sorting_three(t_stack **list_a);
 void		algoritm(t_stack **list_a, t_stack **list_b);
-//void	last_move(t_list **list_a);
+//void		send_a(t_stack **stack_a, t_stack **stack_b);
+//void		send_b( t_stack **stack_a, t_stack **stack_b);
+//void		last_move(t_stack **list_a);
 
 /* UTILS */
 void		add_back(t_stack **head, t_stack *new);

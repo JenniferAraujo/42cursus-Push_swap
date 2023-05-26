@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 19:24:22 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/10 21:02:52 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:17:39 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	change_index_positive(t_stack *stack)
 {
 	t_stack	*current;
 
-	//stack->index = 0;
 	current = stack->next;
 	while (current != NULL)
 	{
@@ -29,7 +28,6 @@ void	change_index_negative(t_stack *stack)
 {
 	t_stack	*current;
 
-	//stack->index = 0;
 	current = stack->next;
 	while (current != NULL)
 	{

@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/24 21:27:30 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/05/26 15:50:49 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,8 @@ SRC = operations/swap.c \
 		init/find_element_with_less_operations.c \
 		moves/sorting_three.c \
 		moves/algoritm.c \
+		moves/moves_stacks.c \
+		moves/last_move.c \
 		push_swap.c
 		
 OBJ = $(SRC:%.c=%.o)
