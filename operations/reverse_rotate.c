@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:34:09 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/10 19:18:14 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/29 19:02:13 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*Desloca para baixo todos os elementos da pilha a em 1. O último elemento
 torna-se o primeiro.*/
-void	reverse_rotate_a(t_stack **list_a)
+void	reverse_rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
 	t_stack	*new;
@@ -39,11 +39,12 @@ void	reverse_rotate_a(t_stack **list_a)
 	}
 	add_back(&new, *list_a);
 	*list_a = new;
-	change_index_positive(*list_a);
-	ft_printf("rra\n");
+	change_index_positive(list_a);
+	if (flag == 1)
+		ft_printf("rra\n");
 }
 
-void	reverse_rotate_b(t_stack **list_b)
+void	reverse_rotate_b(t_stack **list_b, int flag)
 {
 	t_stack	*tmp;
 	t_stack	*new;
@@ -68,13 +69,14 @@ void	reverse_rotate_b(t_stack **list_b)
 	}
 	add_back(&new, *list_b);
 	*list_b = new;
-	change_index_positive(*list_b);
-	ft_printf("rrb\n");
+	change_index_positive(list_b);
+	if(flag == 1)
+		ft_printf("rrb\n");
 }
 
 void	rrr(t_stack **list_a, t_stack **list_b)
 {
-	reverse_rotate_a(list_a);
-	reverse_rotate_b(list_b);
+	reverse_rotate_a(list_a, 0);
+	reverse_rotate_b(list_b, 0);
 	ft_printf("rrr\n");
 }

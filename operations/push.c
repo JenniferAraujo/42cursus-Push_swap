@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:35:37 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/10 19:46:51 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:56:44 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	push_a(t_stack **list_a, t_stack **list_b)
 		(*list_b)->next = *list_a;
 		*list_a = *list_b;
 		*list_b = tmp;
-		change_index_positive(*list_a);
-		change_index_negative(*list_b);
+		change_index_positive(list_a);
+		change_index_negative(list_b);
 		ft_printf("pa\n");
 	}
 }  
@@ -40,8 +40,8 @@ void	push_b(t_stack **list_a, t_stack **list_b)
 		(*list_a)->next = *list_b;
 		*list_b = *list_a;
 		*list_a = tmp;
-		change_index_positive(*list_b);
-		change_index_negative(*list_a);
+		change_index_positive(list_b);
+		change_index_negative(list_a);
 		ft_printf("pb\n");
 	}
 }

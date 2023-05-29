@@ -21,6 +21,7 @@ t_stack	*smallest_number(t_stack *node)
 	t_stack	*result;
 
 	small = node->value;
+	result = node;
 	current = node->next;
 	if (node == NULL)
 	{
