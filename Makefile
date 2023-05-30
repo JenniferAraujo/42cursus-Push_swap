@@ -6,13 +6,13 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/29 19:11:10 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/05/30 18:34:55 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
-#CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -g
 LIBFT = ./libft/libft.a
 LIBFTDIR = ./libft
 
@@ -22,20 +22,21 @@ SRC = operations/swap.c \
 		operations/push.c \
 		functions_utils/operations_utils.c \
 		functions_utils/change_index.c \
-		checks/args_validations.c \
-		checks/free.c \
-		checks/ft_error.c \
-		checks/validations.c \
+		validations/args_validations.c \
+		init/start_validations.c \
 		init/for_stack.c \
 		init/create_stack.c \
-		init/count_op.c \
-		init/bigger_numbers.c \
-		init/smaller_numbers.c \
-		init/find_element_with_less_operations.c \
+		costs/count_op.c \
+		costs/bigger_numbers.c \
+		costs/smaller_numbers.c \
+		costs/find_element_with_less_operations.c \
 		moves/sorting_three.c \
 		moves/algoritm.c \
 		moves/moves_stacks.c \
+		moves/send_numbers.c \
 		moves/last_move.c \
+		end/free.c \
+		end/ft_error.c \
 		push_swap.c
 		
 OBJ = $(SRC:%.c=%.o)

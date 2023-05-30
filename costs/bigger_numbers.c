@@ -1,63 +1,59 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   smaller_numbers.c                                  :+:      :+:    :+:   */
+/*   bigger_numbers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 19:16:36 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/09 16:26:17 by jede-ara         ###   ########.fr       */
+/*   Created: 2023/05/04 14:58:15 by jede-ara          #+#    #+#             */
+/*   Updated: 2023/05/30 18:16:56 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-//encontra o menor numero em uma stack
-t_stack	*smallest_number(t_stack *node)
+//encontra o maior numero da stack
+t_stack		*biggest_number(t_stack *node)
 {
-	int		small;
+	int		big;
 	t_stack	*current;
-	t_stack	*result;
+	t_stack *result;
 
-	small = node->value;
+	big = node->value;
 	result = node;
 	current = node->next;
-	if (node == NULL)
-	{
-		ft_printf("Error\n");
-		return (0);
-	}
 	while (current != NULL)
 	{
-		if (current->value < small)
+		if (current->value > big)
+		{
 			result = current;
+			big = current->value;
+		}
 		current = current->next;
 	}
 	return (result);
 }
 
-//encontra o proximo menor numero da lista A
-t_stack	*next_smallest(t_stack *first, int number_a)
+//encontra o proximo maior numero da stack
+t_stack	*next_biggest(t_stack *first, int number_a)
 {
-	int		next_smallest;
+	int		next_biggest;
 	t_stack	*current;
 	t_stack	*result;
 	
 	current = first;
-	if (current == NULL)
-	{
-		ft_printf("Error\n");
-		return (0);
-	}
-	while (current->value > number_a)
+	while (current->value < number_a)
 		current = current->next;
-	next_smallest = current->value;
+	result = current;
+	next_biggest = current->value;
 	current = current->next;
-	while (current != NULL)
+	while(current != NULL)
 	{
-		if (current->value > next_smallest && current->value < number_a)
+		if (current->value < next_biggest && current->value > number_a)
+		{
 			result = current;
+			next_biggest = current->value;
+		}
 		current = current->next;
 	}
 	return (result);
