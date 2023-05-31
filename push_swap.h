@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/30 18:35:41 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:15:03 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int				find_index(t_stack *list, int value);
 int				stack_size(t_stack **list);
 
 /* COSTS */
-int			count_op(t_stack *list_a, int size, int *flag);
+int			count_op(t_stack **list_a, int size, int *flag);
 int			count_stack_b(int nbr, t_stack *list_b, int *flag);
 int			count_stack(t_stack *current_a, t_stack *list_a, t_stack *list_b);
 t_stack		*smallest_number(t_stack *node);
@@ -76,7 +76,9 @@ void			algoritm(t_stack **list_a, t_stack **list_b);
 void			ra(t_stack **list_a, int operations, int flag);
 void			rb(t_stack **list_b, int operations, int flag);
 void			double_rotate(t_stack **list_a, t_stack **list_b, int operations, int flag);
+int				costs_send_a(int nbr, t_stack *list_a, int *flag);
 void			send_b(t_stack *current, t_stack **list_a, t_stack **list_b);
+void			send_a(t_stack **list_a, t_stack **list_b);
 void 			move_stacks_dif(t_stack *current, t_stack **list_a, t_stack **list_b);
 
 /* END */

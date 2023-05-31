@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:02:34 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/29 17:28:45 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/31 18:02:39 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,9 @@ int main(int ac, char **av)
     create_list(&list_a, ac, av);
     ft_printf("Initial list A\n");
     print_list(&list_a);
+    print_list(&list_b);
     algoritm(&list_a, &list_b);
+    ft_printf("Depois do algoritmo\n");
+    print_list(&list_a);
+    print_list(&list_b);
 }

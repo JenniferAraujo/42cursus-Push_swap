@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:19:53 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/30 18:23:14 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:53:42 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ void	send_b(t_stack *current, t_stack **list_a, t_stack **list_b)
 	int	dif;
 
 	count = 0;
-	operations_a = count_op(current, stack_size(list_a), &flag_a);
+	operations_a = count_op(&current, stack_size(list_a), &flag_a);
 	operations_b = count_stack_b(current->value, *list_b, &flag_b);
-	ft_printf("op a: %d\n op b:%d\n", operations_a, operations_b);
 	if (flag_a == flag_b)
 	{
 		if (flag_a == 0)
@@ -75,40 +74,47 @@ void	send_b(t_stack *current, t_stack **list_a, t_stack **list_b)
 		move_stacks_dif(current, list_a, list_b);
 }
 
-/*void	send_a(t_stack *current, t_stack **list_a, t_stack **list_b)
+int	costs_send_a(int nbr, t_stack *list_a, int *flag)
 {
-	
-
-
-	
-}
-int	count_stack_b(int nbr, t_stack *list_b, int *flag)
-{
-	int		number_op;
+	int	number_op;
 	t_stack	*current;
 	t_stack	*biggest;
 	t_stack	*smallest;
 
-	current = list_b;
-	ft_printf("nbr:%d, count_b current: %d\n", nbr, current->value);
-	//while (current != NULL && current->value != nbr)
-	//{
-	//	current = current->next;
-	//}
-	biggest = biggest_number(list_b);
-	ft_printf("biggest_number:%d\n", biggest->value);
-	smallest = smallest_number(list_b);
-	ft_printf("smallest_number:%d\n", smallest->value);
+	current = list_a;
+	biggest = biggest_number(list_a);
+	smallest = smallest_number(list_a);
 	if (current == NULL || (nbr > biggest->value || nbr < smallest->value))
-		current = biggest;
+		current = smallest;
 	else
-	{
-		ft_printf("entra aqui caralho\n");
-		current = next_smallest(list_b, nbr);
-		ft_printf("LIST B?\n");
-		print_list(&list_b);
-		ft_printf("next smallest: %d\n", current->value);
-	}
-	number_op = count_op(current, stack_size(&list_b), flag);
+		current = next_biggest(list_a, nbr);
+	number_op = count_op(&current, stack_size(&list_a), flag);
 	return (number_op);
-}*/
+}
+
+void	send_a(t_stack **list_a, t_stack **list_b)
+{
+	int	nbr;
+	int	operations_a;
+	int	flag_a;
+	int	count;
+
+	
+	while (stack_size(list_b))
+	{
+		nbr = (*list_b)->value;
+		count = 0;
+		operations_a = costs_send_a(nbr, *list_a, &flag_a);
+		while(count++ < operations_a)
+		{
+			if (flag_a == 0)
+			{
+				rotate_a(list_a, 1);
+			}
+			else
+				reverse_rotate_a(list_a, 1);
+		}
+		push_a(list_a, list_b);
+	}
+	
+}

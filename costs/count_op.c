@@ -6,21 +6,20 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/30 18:26:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:59:39 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 //conta o numero de operacoes para ordenar a lista
-int	count_op(t_stack *list_a, int size, int *flag)
+int	count_op(t_stack **list_a, int size, int *flag)
 {
 	int	number_elements;
 	int	half_len;
 
-	number_elements = list_a->index;
+	number_elements = (*list_a)->index;
 	half_len = size / 2;
-	//ft_printf("number_elements:%d, size:%d, half_len:%d\n", number_elements, size, half_len);
 	if (number_elements <= half_len)
 	{
 		*flag = 0;
@@ -42,26 +41,16 @@ int	count_stack_b(int nbr, t_stack *list_b, int *flag)
 	t_stack	*smallest;
 
 	current = list_b;
-	ft_printf("nbr:%d, count_b current: %d\n", nbr, current->value);
-	//while (current != NULL && current->value != nbr)
-	//{
-	//	current = current->next;
-	//}
 	biggest = biggest_number(list_b);
-	ft_printf("biggest_number:%d\n", biggest->value);
 	smallest = smallest_number(list_b);
-	ft_printf("smallest_number:%d\n", smallest->value);
 	if (current == NULL || (nbr > biggest->value || nbr < smallest->value))
 		current = biggest;
 	else
 	{
-		ft_printf("entra aqui caralho\n");
 		current = next_smallest(list_b, nbr);
-		ft_printf("LIST B?\n");
 		print_list(&list_b);
-		ft_printf("next smallest: %d\n", current->value);
 	}
-	number_op = count_op(current, stack_size(&list_b), flag);
+	number_op = count_op(&current, stack_size(&list_b), flag);
 	return (number_op);
 }
 
@@ -74,10 +63,8 @@ int	count_stack(t_stack *current_a, t_stack *list_a, t_stack *list_b)
 	int	operations_b;
 
 	i = 0;
-	operations_a = count_op(current_a, stack_size(&list_a), &flag_a);
-	ft_printf("op a: %d\nflag_a: %d\n", operations_a, flag_a);
+	operations_a = count_op(&current_a, stack_size(&list_a), &flag_a);
 	operations_b = count_stack_b(current_a->value, list_b, &flag_b);
-	ft_printf("op b: %d\nflag_b: %d\n", operations_b, flag_b);
 	if (flag_a == flag_b)
 	{
 		if (operations_a > operations_b)
