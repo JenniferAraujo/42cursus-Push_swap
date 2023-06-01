@@ -21,11 +21,11 @@
 
 typedef struct s_stack
 {
-	int			value;
-	int			flag;
-	int			index;
+	int				value;
+	int				flag;
+	int				index;
 	struct s_stack	*next;
-}					t_stack;
+}	t_stack;
 
 /* VALIDATIONS*/
 void		is_int(long long number, t_stack *list);
