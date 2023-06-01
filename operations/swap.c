@@ -16,7 +16,7 @@
 void	swap_a(t_stack **list_a, int flag)
 {
 	int	temp;
-	
+
 	if (list_a && (*list_a)->next != NULL)
 	{
 		temp = (*list_a)->value;
@@ -25,14 +25,13 @@ void	swap_a(t_stack **list_a, int flag)
 		if (flag == 1)
 			ft_printf("sa\n");
 	}
-	
 }
 
 //troca os 2 primeiros elementos no topo da pilha b.
 void	swap_b(t_stack **list_b, int flag)
 {
 	int	temp;
-	
+
 	if (list_b && (*list_b)->next != NULL)
 	{
 		temp = (*list_b)->value;

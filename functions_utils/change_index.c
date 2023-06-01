@@ -45,8 +45,8 @@ void	change_index_negative(t_stack **stack)
 void	change_index_rotate(t_stack **stack)
 {
 	t_stack	*current;
-	int temp;
-	
+	int		temp;
+
 	(*stack)->index = 0;
 	current = (*stack)->next;
 	while (current != NULL)

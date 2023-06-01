@@ -6,58 +6,52 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/24 21:38:27 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/01 21:45:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	is_int(long long number, t_stack *stack)
+void	is_int(long long number, t_stack *list)
 {
-	if (number > INT_MAX || number < INT_MIN)
-		ft_error("Error\n", stack);
+	if (number > 2147483647 || number < -2147483647)
+		ft_error("Error\n", list);
 }
 
-int	check_number(t_stack *node)
+void	check_number(const char *str, t_stack *list)
 {
-	int	str;
-
-	str = node->value;
-	if (str == '-' || str == '+')
+	if (*str == '-' || *str == '+')
 		str++;
-	if ((str >= 65 && str <= 90) || (str >= 97 && str <= 122)
-		|| (str == ' ' || str == '\t'))
+	if (*str == '\0')
+		ft_error("Error\n", list);
+	while (*str)
 	{
-		if ((str >= 48) && (str <= 57))
-			return (1);
-		else
-			return (0);
+		if (*str < '0' || *str > '9')
+			ft_error("Error\n", list);
+		str++;
 	}
-	else
-		return (0);
 }
 
-int	double_number(t_stack *stack)
+void	double_number(t_stack *list)
 {
 	t_stack	*tmp;
 
-	while (stack)
+	while (list)
 	{
-		tmp = stack->next;
+		tmp = list->next;
 		while (tmp)
 		{
-			if (stack->value == tmp->value)
-				return (1);
+			if (list->value == tmp->value)
+				ft_error("Error\n", list);
 			tmp = tmp->next;
 		}
-		stack = stack->next;
+		list = list->next;
 	}
-	return (0);
 }
 
 int	is_ordered(t_stack *list_a)
 {
-	int	num;
+	int		num;
 	t_stack	*current;
 
 	current = list_a;

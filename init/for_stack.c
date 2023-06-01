@@ -31,8 +31,8 @@ int	find_index(t_stack *list, int value)
 // Retorna o tamanho da lista
 int	stack_size(t_stack **list)
 {
-	int	size;
-	t_stack *current;
+	int		size;
+	t_stack	*current;
 
 	current = *list;
 	size = 0;

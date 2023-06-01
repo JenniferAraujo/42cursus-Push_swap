@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:43:40 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/31 17:56:32 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/01 17:42:08 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	algoritm(t_stack **list_a, t_stack **list_b)
 	if (stack_size(list_a) == 3 && is_ordered(*list_a))
 		sorting_three(list_a);
 	send_a(list_a, list_b);
+	last_move(list_a);
 }
-

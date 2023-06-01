@@ -6,15 +6,15 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:01:45 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/24 11:32:28 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/01 21:27:22 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_error(char *c, t_stack *stack)
+void	ft_error(char *c, t_stack *list)
 {
 	ft_printf("Error\n", c);
-	free_stack(&stack);
+	free_stack(&list);
 	exit(0);
 }

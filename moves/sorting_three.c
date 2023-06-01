@@ -12,23 +12,27 @@
 
 #include "../push_swap.h"
 
-void sorting_three(t_stack **list_a)
+void	sorting_three(t_stack **list_a)
 {
-	if ((*list_a)->value > (*list_a)->next->value && (*list_a)->value < (*list_a)->next->next->value)
+	if ((*list_a)->value > (*list_a)->next->value && (*list_a)->value
+		< (*list_a)->next->next->value)
 		swap_a(list_a, 1);
-	else if ((*list_a)->value > (*list_a)->next->value && (*list_a)->next->value > (*list_a)->next->next->value)
+	else if ((*list_a)->value > (*list_a)->next->value && (*list_a)->next->value
+		> (*list_a)->next->next->value)
 	{
 		swap_a(list_a, 1);
 		reverse_rotate_a(list_a, 1);
 	}
-	else if ((*list_a)->value > (*list_a)->next->value && (*list_a)->value > (*list_a)->next->next->value)
+	else if ((*list_a)->value > (*list_a)->next->value && (*list_a)->value
+		> (*list_a)->next->next->value)
 		rotate_a(list_a, 1);
-	else if ((*list_a)->value < (*list_a)->next->next->value && (*list_a)->next->value > (*list_a)->next->next->value)
+	else if ((*list_a)->value < (*list_a)->next->next->value
+		&& (*list_a)->next->value > (*list_a)->next->next->value)
 	{
 		swap_a(list_a, 1);
 		rotate_a(list_a, 1);
 	}
-	else if ((*list_a)->value < (*list_a)->next->value && (*list_a)->value > (*list_a)->next->next->value)
+	else if ((*list_a)->value < (*list_a)->next->value && (*list_a)->value
+		> (*list_a)->next->next->value)
 		reverse_rotate_a(list_a, 1);
 }
-

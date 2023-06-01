@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:38:20 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/30 18:34:55 by jede-ara         ###   ########.fr        #
+#    Updated: 2023/06/01 20:17:25 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRC = operations/swap.c \
 		moves/sorting_three.c \
 		moves/algoritm.c \
 		moves/moves_stacks.c \
-		moves/send_numbers.c \
+		moves/send_b.c \
+		moves/send_a.c \
 		moves/last_move.c \
 		end/free.c \
 		end/ft_error.c \

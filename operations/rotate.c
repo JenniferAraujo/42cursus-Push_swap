@@ -18,7 +18,6 @@ void	rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
 
-
 	if ((*list_a)->next == NULL)
 		return ;
 	tmp = (*list_a)->next;
@@ -26,7 +25,7 @@ void	rotate_a(t_stack **list_a, int flag)
 	add_back(&tmp, (*list_a));
 	*list_a = tmp;
 	change_index_rotate(list_a);
-	if(flag == 1)
+	if (flag == 1)
 		ft_printf("ra\n");
 }
 
@@ -43,7 +42,7 @@ void	rotate_b(t_stack **list_b, int flag)
 	add_back(&tmp, *list_b);
 	*list_b = tmp;
 	change_index_rotate(list_b);
-	if(flag == 1)
+	if (flag == 1)
 		ft_printf("rb\n");
 }
 

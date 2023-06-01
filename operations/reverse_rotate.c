@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:34:09 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/29 19:02:13 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/01 16:04:31 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,16 @@ void	reverse_rotate_a(t_stack **list_a, int flag)
 	t_stack	*tmp;
 	t_stack	*new;
 
+	tmp = *list_a;
+	new = NULL;
 	if ((*list_a)->next == NULL)
 		return ;
-	tmp = *list_a;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-	new = ft_lstnew(tmp->value, 0);
-	new->flag = tmp->flag;
-	tmp = *list_a;
 	while (tmp->next != NULL)
 	{
 		if ((tmp->next)->next == NULL)
 		{
+			new = ft_lstnew(tmp->next->value, 0);
+			new->flag = tmp->next->flag;
 			free(tmp->next);
 			tmp->next = NULL;
 		}
@@ -49,18 +47,16 @@ void	reverse_rotate_b(t_stack **list_b, int flag)
 	t_stack	*tmp;
 	t_stack	*new;
 
+	tmp = *list_b;
+	new = NULL;
 	if ((*list_b)->next == NULL)
 		return ;
-	tmp = *list_b;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-	new = ft_lstnew(tmp->value, 0);
-	new->flag = tmp->flag;
-	tmp = *list_b;
 	while (tmp->next != NULL)
 	{
 		if ((tmp->next)->next == NULL)
 		{
+			new = ft_lstnew(tmp->next->value, 0);
+			new->flag = tmp->next->flag;
 			free(tmp->next);
 			tmp->next = NULL;
 		}
@@ -70,7 +66,7 @@ void	reverse_rotate_b(t_stack **list_b, int flag)
 	add_back(&new, *list_b);
 	*list_b = new;
 	change_index_positive(list_b);
-	if(flag == 1)
+	if (flag == 1)
 		ft_printf("rrb\n");
 }
 

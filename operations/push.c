@@ -28,7 +28,7 @@ void	push_a(t_stack **list_a, t_stack **list_b)
 		change_index_negative(list_b);
 		ft_printf("pa\n");
 	}
-}  
+}
 
 void	push_b(t_stack **list_a, t_stack **list_b)
 {

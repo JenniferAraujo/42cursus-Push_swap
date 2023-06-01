@@ -14,19 +14,21 @@
 
 t_stack	*find_element_with_less_operations(t_stack **list_a, t_stack **list_b)
 {
-	t_stack	*result = NULL;
-	t_stack	*current = *list_a;
-	int		less_operations = 0;
+	t_stack	*result;
+	t_stack	*current;
+	int		less_operations;
 	int		operations;
-	int		counter = 0;
+	int		count;
 
+	current = *list_a;
+	count = 0;
 	while (current != NULL)
 	{
 		operations = count_stack(current, *list_a, *list_b);
 		if (operations == 0)
 		{
 			result = current;
-			break;
+			break ;
 		}
 		if (operations < less_operations || less_operations == 0)
 		{
@@ -34,7 +36,7 @@ t_stack	*find_element_with_less_operations(t_stack **list_a, t_stack **list_b)
 			result = current;
 		}
 		current = current->next;
-		counter++;
+		count++;
 	}
 	return (result);
 }
