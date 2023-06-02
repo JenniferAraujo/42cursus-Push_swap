@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:43:40 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/06/01 17:42:08 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/02 16:03:58 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	algoritm(t_stack **list_a, t_stack **list_b)
 {
 	t_stack	*current;
 
-	if (stack_size(list_a) > 3)
+	if (stack_size(list_a) > 3 && is_ordered(*list_a))
 	{
 		push_b(list_a, list_b);
 		if (stack_size(list_a) > 4)
 			push_b(list_a, list_b);
 	}
-	while (stack_size(list_a) > 3)
+	while (stack_size(list_a) > 3 && is_ordered(*list_a))
 	{
 		current = find_element_with_less_operations(list_a, list_b);
 		send_b(current, list_a, list_b);

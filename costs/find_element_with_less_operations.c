@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 18:20:59 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/31 18:03:33 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/02 16:30:09 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ t_stack	*find_element_with_less_operations(t_stack **list_a, t_stack **list_b)
 	t_stack	*current;
 	int		less_operations;
 	int		operations;
-	int		count;
 
+	less_operations = 0;
 	current = *list_a;
-	count = 0;
 	while (current != NULL)
 	{
 		operations = count_stack(current, *list_a, *list_b);
@@ -36,7 +35,6 @@ t_stack	*find_element_with_less_operations(t_stack **list_a, t_stack **list_b)
 			result = current;
 		}
 		current = current->next;
-		count++;
 	}
 	return (result);
 }

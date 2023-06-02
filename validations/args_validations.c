@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/06/01 21:45:37 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/02 16:06:54 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	is_int(long long number, t_stack *list)
 {
-	if (number > 2147483647 || number < -2147483647)
+	if (number > INT_MAX || number < INT_MIN)
 		ft_error("Error\n", list);
 }
 

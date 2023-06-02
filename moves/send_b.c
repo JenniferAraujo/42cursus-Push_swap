@@ -6,13 +6,13 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:19:53 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/06/01 20:56:11 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/02 16:02:08 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	handle_flag_0(int operations_a, int operations_b, t_stack **list_a,
+void	rotate_stack(int operations_a, int operations_b, t_stack **list_a,
 	t_stack **list_b)
 {
 	int	count;
@@ -39,7 +39,7 @@ void	handle_flag_0(int operations_a, int operations_b, t_stack **list_a,
 	}
 }
 
-void	handle_flag_1(int operations_a, int operations_b, t_stack **list_a,
+void	reverse_rotate_stack(int operations_a, int operations_b, t_stack **list_a,
 	t_stack **list_b)
 {
 	int	count;
@@ -80,9 +80,9 @@ void	send_b(t_stack *current, t_stack **list_a, t_stack **list_b)
 	if (flag_a == flag_b)
 	{
 		if (flag_a == 0)
-			handle_flag_0(operations_a, operations_b, list_a, list_b);
+			rotate_stack(operations_a, operations_b, list_a, list_b);
 		else
-			handle_flag_1(operations_a, operations_b, list_a, list_b);
+			reverse_rotate_stack(operations_a, operations_b, list_a, list_b);
 	}
 	if (flag_a != flag_b)
 		move_stacks_dif(current, list_a, list_b);

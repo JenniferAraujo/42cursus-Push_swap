@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:55:00 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/06/01 21:51:29 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/02 16:02:16 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,9 @@ void		rb(t_stack **list_b, int operations, int flag);
 void		double_rotate(t_stack **list_a, t_stack **list_b, int operations,
 				int flag);
 int			costs_send_a(int nbr, t_stack *list_a, int *flag);
-void		handle_flag_0(int operations_a, int operations_b, t_stack **list_a,
+void		rotate_stack(int operations_a, int operations_b, t_stack **list_a,
 				t_stack **list_b);
-void		handle_flag_1(int operations_a, int operations_b, t_stack **list_a,
+void		reverse_rotate_stack(int operations_a, int operations_b, t_stack **list_a,
 				t_stack **list_b);
 void		send_b(t_stack *current, t_stack **list_a, t_stack **list_b);
 void		send_a(t_stack **list_a, t_stack **list_b);
