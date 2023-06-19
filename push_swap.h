@@ -56,7 +56,7 @@ void		push_b(t_stack **list_a, t_stack **list_b);
 /* INIT */
 void		start_validations(t_stack *list);
 void		create_list(t_stack **list, int ac, char **av);
-void		print_list(t_stack **head);
+void		print_list(t_stack **head, char c);
 int			find_index(t_stack *list, int value);
 int			stack_size(t_stack **list);
 
@@ -86,9 +86,9 @@ void		reverse_rotate_stack(int operations_a, int operations_b, t_stack **list_a,
 				t_stack **list_b);
 void		send_b(t_stack *current, t_stack **list_a, t_stack **list_b);
 void		send_a(t_stack **list_a, t_stack **list_b);
-void		move_stacks_dif_a(t_stack *current, t_stack **list_a,
-				t_stack **list_b, int flag_a);
-void		move_stacks_dif_b(t_stack *current, t_stack **list_a,
+t_stack		move_stacks_dif_a(t_stack *current, t_stack **list_a,
+				int flag_a);
+void		move_stacks_dif_b(t_stack *current,
 				t_stack **list_b, int flag_b);
 void		move_stacks_dif(t_stack *current, t_stack **list_a,
 				t_stack **list_b);

@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:02:16 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/09 16:38:37 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:37:52 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_stack	*ft_lstnew(int content, int index)
 {
 	t_stack	*node;
 
-	node = (t_stack *) malloc(sizeof(t_stack));
+	node = (t_stack *)malloc(sizeof(t_stack));
 	if (!node)
 		return (0);
 	node->value = content;

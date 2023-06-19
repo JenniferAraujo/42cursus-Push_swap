@@ -79,6 +79,8 @@ void	send_b(t_stack *current, t_stack **list_a, t_stack **list_b)
 	operations_b = count_stack_b(current->value, *list_b, &flag_b);
 	if (flag_a == flag_b)
 	{
+		//ft_printf("IN SEND B 1\nop: %d flag_b: %d\n", operations_b, flag_b);
+		//ft_printf("current: %d\n", current->value);
 		if (flag_a == 0)
 			rotate_stack(operations_a, operations_b, list_a, list_b);
 		else

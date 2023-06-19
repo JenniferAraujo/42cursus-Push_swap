@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:50:52 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/06/02 16:06:54 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:14:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	is_ordered(t_stack *list_a)
 	int		num;
 	t_stack	*current;
 
+	  if (list_a == NULL) 
+        return (0);
 	current = list_a;
 	num = current->value;
 	current = current->next;

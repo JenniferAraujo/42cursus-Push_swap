@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:58:15 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/05/30 18:16:56 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:54:49 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ t_stack	*biggest_number(t_stack *node)
 	int		big;
 	t_stack	*current;
 	t_stack	*result;
+
+	if (node == NULL)
+        return NULL;
 
 	big = node->value;
 	result = node;

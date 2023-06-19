@@ -5,11 +5,10 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/11 11:04:16 by jede-ara          #+#    #+#              #
-#    Updated: 2023/05/02 18:26:40 by jede-ara         ###   ########.fr        #
+#    Created: 2023/06/12 12:12:12 by jede-ara          #+#    #+#              #
+#    Updated: 2023/06/12 12:12:16 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 SRC =			ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 					ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c ft_memcpy.c \

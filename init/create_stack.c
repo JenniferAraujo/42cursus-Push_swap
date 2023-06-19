@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:26:12 by jenny             #+#    #+#             */
-/*   Updated: 2023/06/01 21:51:21 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:26:31 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,14 @@ void	create_list(t_stack **list, int ac, char **av)
 	}
 }
 
-void	print_list(t_stack **head)
+void	print_list(t_stack **head, char c)
 {
 	t_stack	*current;
 
+	if (c == 'a')
+		ft_printf("LISTA A\n");
+	else
+		ft_printf("LISTA B\n");
 	current = *head;
 	while (current != NULL)
 	{

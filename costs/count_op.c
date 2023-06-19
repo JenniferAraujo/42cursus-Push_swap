@@ -6,7 +6,7 @@
 /*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:28:50 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/06/01 15:21:07 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:34:28 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	count_op(t_stack **current, int size, int *flag)
 {
 	int	index_element;
 	int	half_len;
-
+	
+	if (*current == NULL)
+        return (0);
 	index_element = (*current)->index;
 	half_len = size / 2;
 	if (index_element <= half_len)
@@ -47,8 +49,9 @@ int	count_stack_b(int nbr, t_stack *list_b, int *flag)
 		current = biggest;
 	else
 	{
+		//ft_printf("entra aqui\n");
 		current = next_smallest(list_b, nbr);
-		print_list(&list_b);
+		//ft_printf("current:%d\n", current->value);
 	}
 	number_op = count_op(&current, stack_size(&list_b), flag);
 	return (number_op);
@@ -65,6 +68,7 @@ int	count_stack(t_stack *current_a, t_stack *list_a, t_stack *list_b)
 	i = 0;
 	operations_a = count_op(&current_a, stack_size(&list_a), &flag_a);
 	operations_b = count_stack_b(current_a->value, list_b, &flag_b);
+	//ft_printf("%d: op b: %d, flag b: %d\n", current_a->value, operations_b, flag_b);
 	if (flag_a == flag_b)
 	{
 		if (operations_a > operations_b)
