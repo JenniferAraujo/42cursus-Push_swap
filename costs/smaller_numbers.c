@@ -18,10 +18,9 @@ t_stack	*smallest_number(t_stack *node)
 	int		small;
 	t_stack	*current;
 	t_stack	*result;
-	
-	if (node == NULL)
-        return NULL;
 
+	if (node == NULL)
+		return (NULL);
 	small = node->value;
 	result = node;
 	current = node->next;

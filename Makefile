@@ -20,10 +20,9 @@ SRC = operations/swap.c \
 		operations/rotate.c \
 		operations/reverse_rotate.c \
 		operations/push.c \
-		functions_utils/operations_utils.c \
-		functions_utils/change_index.c \
-		validations/args_validations.c \
-		init/start_validations.c \
+		init/args_validations.c \
+		init/create_node.c \
+		init/change_index.c \
 		init/for_stack.c \
 		init/create_stack.c \
 		costs/count_op.c \

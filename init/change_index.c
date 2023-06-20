@@ -12,13 +12,13 @@
 
 #include "../push_swap.h"
 
-void	change_index_positive(t_stack **stack)
+void	change_index_positive(t_stack **list)
 {
 	t_stack	*current;
 
-	current = (*stack);
+	current = (*list);
 	current->index = 0;
-	current = (*stack)->next;
+	current = (*list)->next;
 	while (current != NULL)
 	{
 		current->index = current->index + 1;
@@ -26,15 +26,15 @@ void	change_index_positive(t_stack **stack)
 	}
 }
 
-void	change_index_negative(t_stack **stack)
+void	change_index_negative(t_stack **list)
 {
 	t_stack	*current;
 
-	current = (*stack);
+	current = (*list);
 	if (current == NULL || current->next == NULL)
 		return ;
 	current->index = 0;
-	current = (*stack)->next;
+	current = (*list)->next;
 	while (current != NULL)
 	{
 		current->index = current->index - 1;
@@ -42,13 +42,13 @@ void	change_index_negative(t_stack **stack)
 	}
 }
 
-void	change_index_rotate(t_stack **stack)
+void	change_index_rotate(t_stack **list)
 {
 	t_stack	*current;
 	int		temp;
 
-	(*stack)->index = 0;
-	current = (*stack)->next;
+	(*list)->index = 0;
+	current = (*list)->next;
 	while (current != NULL)
 	{
 		if (current->next == NULL)

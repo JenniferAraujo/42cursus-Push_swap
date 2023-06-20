@@ -17,7 +17,7 @@ void	free_stack(t_stack **list)
 	t_stack	*tmp;
 
 	tmp = NULL;
-	while (*list)
+	while (stack_size(list))
 	{
 		tmp = (*list)->next;
 		free(*list);

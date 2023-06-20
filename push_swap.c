@@ -20,15 +20,9 @@ int	main(int ac, char **av)
 	list_a = NULL;
 	list_b = NULL;
 	if (ac < 2)
-		ft_error("Error\n", list_a);
+		return (0);
 	create_list(&list_a, ac, av);
-	start_validations(list_a);
-	//ft_printf("Antes do algoritmo\n");
-	//print_list(&list_a);
 	algoritm(&list_a, &list_b);
-	//printf("Depois do algoritmo\n");
-	//print_list(&list_a);
 	free_stack(&list_a);
 	free_stack(&list_b);
 }
-./push_swap 62 65 55 31 4 26 72 7 90 56 84 89 41 29 52 18 16 91 86 53

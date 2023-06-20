@@ -12,9 +12,9 @@
 
 #include "../push_swap.h"
 
-void	ft_error(char *c, t_stack *list)
+void	ft_error(char *c, t_stack **list)
 {
 	ft_printf("Error\n", c);
-	free_stack(&list);
+	free_stack(list);
 	exit(0);
 }

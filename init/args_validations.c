@@ -12,13 +12,13 @@
 
 #include "../push_swap.h"
 
-void	is_int(long long number, t_stack *list)
+void	is_int(long long number, t_stack **list)
 {
 	if (number > INT_MAX || number < INT_MIN)
 		ft_error("Error\n", list);
 }
 
-void	check_number(const char *str, t_stack *list)
+void	check_number(const char *str, t_stack **list)
 {
 	if (*str == '-' || *str == '+')
 		str++;
@@ -32,20 +32,24 @@ void	check_number(const char *str, t_stack *list)
 	}
 }
 
-void	double_number(t_stack *list)
+void	double_number(t_stack **list)
 {
 	t_stack	*tmp;
+	t_stack	*aux;
+	int		count;
 
-	while (list)
+	aux = *list;
+	count = 0;
+	while (count++ < (stack_size(list) -1))
 	{
-		tmp = list->next;
+		tmp = aux->next;
 		while (tmp)
 		{
-			if (list->value == tmp->value)
+			if (aux->value == tmp->value)
 				ft_error("Error\n", list);
 			tmp = tmp->next;
 		}
-		list = list->next;
+		aux = aux->next;
 	}
 }
 
@@ -54,8 +58,8 @@ int	is_ordered(t_stack *list_a)
 	int		num;
 	t_stack	*current;
 
-	  if (list_a == NULL) 
-        return (0);
+	if (list_a == NULL)
+		return (0);
 	current = list_a;
 	num = current->value;
 	current = current->next;

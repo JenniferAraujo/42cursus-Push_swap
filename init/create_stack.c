@@ -14,21 +14,22 @@
 
 void	create_list(t_stack **list, int ac, char **av)
 {
-	int	i;
-	int	number;
-	int	index;
+	int			i;
+	int			index;
+	long long	number;
 
 	index = 0;
 	i = 1;
 	while (i < ac)
 	{
 		number = ft_atoi(av[i]);
-		is_int(number, *list);
-		check_number(av[i], *list);
+		is_int(number, list);
+		check_number(av[i], list);
 		add_back(list, ft_lstnew(number, index));
 		i++;
 		index++;
 	}
+	double_number(list);
 }
 
 void	print_list(t_stack **head, char c)

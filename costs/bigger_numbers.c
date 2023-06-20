@@ -20,8 +20,7 @@ t_stack	*biggest_number(t_stack *node)
 	t_stack	*result;
 
 	if (node == NULL)
-        return NULL;
-
+		return (NULL);
 	big = node->value;
 	result = node;
 	current = node->next;
