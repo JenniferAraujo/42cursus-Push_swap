@@ -34,7 +34,6 @@ void		double_number(t_stack **list);
 int			is_ordered(t_stack *list_a);
 void		create_list(t_stack **list, int ac, char **av);
 void		print_list(t_stack **head, char c);
-int			find_index(t_stack *list, int value);
 int			stack_size(t_stack **list);
 
 /* UTILS */
@@ -58,8 +57,8 @@ void		push_a(t_stack **list_a, t_stack **list_b);
 void		push_b(t_stack **list_a, t_stack **list_b);
 
 /* COSTS */
-int			count_op(t_stack **current, int size, int *flag);
-int			count_stack_b(int nbr, t_stack *list_b, int *flag);
+int			count_op_a(t_stack **current, int size, int *flag);
+int			count_op_b(int nbr, t_stack *list_b, int *flag);
 int			count_stack(t_stack *current_a, t_stack *list_a, t_stack *list_b);
 t_stack		*smallest_number(t_stack *node);
 t_stack		*biggest_number(t_stack *node);

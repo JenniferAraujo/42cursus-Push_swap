@@ -21,17 +21,13 @@ t_stack	move_stacks_dif_a(t_stack *current, t_stack **list_a,
 
 	aux = *current;
 	count = 0;
-	operations_a = count_op(&current, stack_size(list_a), &flag_a);
+	operations_a = count_op_a(&current, stack_size(list_a), &flag_a);
 	if (flag_a == 0)
-	{
 		while (count++ < operations_a)
 			rotate_a(list_a, 1);
-	}
 	else
-	{
 		while (count++ < operations_a)
 			reverse_rotate_a(list_a, 1);
-	}
 	return (aux);
 }
 
@@ -42,17 +38,13 @@ void	move_stacks_dif_b(t_stack *current, t_stack **list_b,
 	int	operations_b;
 
 	count = 0;
-	operations_b = count_stack_b(current->value, *list_b, &flag_b);
+	operations_b = count_op_b(current->value, *list_b, &flag_b);
 	if (flag_b == 0)
-	{
 		while (count++ < operations_b)
 			rotate_b(list_b, 1);
-	}
 	else
-	{
 		while (count++ < operations_b)
 			reverse_rotate_b(list_b, 1);
-	}
 }
 
 void	move_stacks_dif(t_stack *current, t_stack **list_a, t_stack **list_b)

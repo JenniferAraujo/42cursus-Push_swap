@@ -23,7 +23,7 @@ SRC = operations/swap.c \
 		init/args_validations.c \
 		init/create_node.c \
 		init/change_index.c \
-		init/for_stack.c \
+		init/stack_size.c \
 		init/create_stack.c \
 		costs/count_op.c \
 		costs/bigger_numbers.c \

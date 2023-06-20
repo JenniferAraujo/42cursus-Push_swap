@@ -12,8 +12,6 @@
 
 #include "../push_swap.h"
 
-/*Pegue o primeiro elemento no topo de b e coloque-o no topo de a. Não faça
-nada se b estiver vazio*/
 void	push_a(t_stack **list_a, t_stack **list_b)
 {
 	t_stack	*tmp;

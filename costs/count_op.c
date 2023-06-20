@@ -12,8 +12,7 @@
 
 #include "../push_swap.h"
 
-//conta o numero de operacoes para ordenar a lista
-int	count_op(t_stack **current, int size, int *flag)
+int	count_op_a(t_stack **current, int size, int *flag)
 {
 	int	index_element;
 	int	half_len;
@@ -34,8 +33,7 @@ int	count_op(t_stack **current, int size, int *flag)
 	}
 }
 
-//para a stack b
-int	count_stack_b(int nbr, t_stack *list_b, int *flag)
+int	count_op_b(int nbr, t_stack *list_b, int *flag)
 {
 	int		number_op;
 	t_stack	*current;
@@ -49,7 +47,7 @@ int	count_stack_b(int nbr, t_stack *list_b, int *flag)
 		current = biggest;
 	else
 		current = next_smallest(list_b, nbr);
-	number_op = count_op(&current, stack_size(&list_b), flag);
+	number_op = count_op_a(&current, stack_size(&list_b), flag);
 	return (number_op);
 }
 
@@ -62,8 +60,8 @@ int	count_stack(t_stack *current_a, t_stack *list_a, t_stack *list_b)
 	int	operations_b;
 
 	i = 0;
-	operations_a = count_op(&current_a, stack_size(&list_a), &flag_a);
-	operations_b = count_stack_b(current_a->value, list_b, &flag_b);
+	operations_a = count_op_a(&current_a, stack_size(&list_a), &flag_a);
+	operations_b = count_op_b(current_a->value, list_b, &flag_b);
 	if (flag_a == flag_b)
 	{
 		if (operations_a > operations_b)

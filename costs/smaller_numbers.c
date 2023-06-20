@@ -12,7 +12,6 @@
 
 #include "../push_swap.h"
 
-//encontra o menor numero em uma stack
 t_stack	*smallest_number(t_stack *node)
 {
 	int		small;
@@ -36,7 +35,6 @@ t_stack	*smallest_number(t_stack *node)
 	return (result);
 }
 
-//encontra o proximo menor numero da lista 
 t_stack	*next_smallest(t_stack *first, int number_a)
 {
 	int		next_smallest;

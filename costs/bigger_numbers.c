@@ -12,7 +12,6 @@
 
 #include "../push_swap.h"
 
-//encontra o maior numero da stack
 t_stack	*biggest_number(t_stack *node)
 {
 	int		big;
@@ -36,7 +35,6 @@ t_stack	*biggest_number(t_stack *node)
 	return (result);
 }
 
-//encontra o proximo maior numero da stack
 t_stack	*next_biggest(t_stack *first, int number_a)
 {
 	int		next_biggest;

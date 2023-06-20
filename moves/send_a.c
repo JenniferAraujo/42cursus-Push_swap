@@ -26,7 +26,7 @@ int	costs_send_a(int nbr, t_stack *list_a, int *flag)
 		current = smallest;
 	else
 		current = next_biggest(list_a, nbr);
-	number_op = count_op(&current, stack_size(&list_a), flag);
+	number_op = count_op_a(&current, stack_size(&list_a), flag);
 	return (number_op);
 }
 
@@ -45,9 +45,7 @@ void	send_a(t_stack **list_a, t_stack **list_b)
 		while (count++ < operations_a)
 		{
 			if (flag_a == 0)
-			{
 				rotate_a(list_a, 1);
-			}
 			else
 				reverse_rotate_a(list_a, 1);
 		}

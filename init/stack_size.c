@@ -12,23 +12,6 @@
 
 #include "../push_swap.h"
 
-// Retorna o índice (posição) do elemento na lista
-int	find_index(t_stack *list, int value)
-{
-	int	index;
-
-	index = 0;
-	while (list != NULL)
-	{
-		if (list->value == value)
-			return (index);
-		list = list->next;
-		index++;
-	}
-	return (0);
-}
-
-// Retorna o tamanho da lista
 int	stack_size(t_stack **list)
 {
 	int		size;

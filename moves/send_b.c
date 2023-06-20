@@ -20,10 +20,8 @@ void	rotate_stack(int operations_a, int operations_b, t_stack **list_a,
 
 	count = 0;
 	if (operations_a <= operations_b)
-	{
 		while (count++ < operations_a)
 			ra_rb(list_a, list_b);
-	}
 	else
 		while (count++ < operations_b)
 			ra_rb(list_a, list_b);
@@ -50,10 +48,8 @@ void	reverse_rotate_stack(int operations_a, int operations_b,
 
 	count = 0;
 	if (operations_a <= operations_b)
-	{
 		while (count++ < operations_a)
 			rrr(list_a, list_b);
-	}
 	else
 		while (count++ < operations_b)
 			rrr(list_a, list_b);
@@ -81,8 +77,8 @@ void	send_b(t_stack *current, t_stack **list_a, t_stack **list_b)
 
 	flag_a = 0;
 	flag_b = 0;
-	operations_a = count_op(&current, stack_size(list_a), &flag_a);
-	operations_b = count_stack_b(current->value, *list_b, &flag_b);
+	operations_a = count_op_a(&current, stack_size(list_a), &flag_a);
+	operations_b = count_op_b(current->value, *list_b, &flag_b);
 	if (flag_a == flag_b)
 	{
 		if (flag_a == 0)

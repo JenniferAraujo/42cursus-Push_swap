@@ -12,8 +12,6 @@
 
 #include "../push_swap.h"
 
-/*Desloca para baixo todos os elementos da pilha a em 1. O último elemento
-torna-se o primeiro.*/
 void	reverse_rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;

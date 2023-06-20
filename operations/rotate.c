@@ -12,8 +12,6 @@
 
 #include "../push_swap.h"
 
-/*desloca todos os elementos da pilha 'a' para cima em 1. O primeiro elemento
-se torna o último*/
 void	rotate_a(t_stack **list_a, int flag)
 {
 	t_stack	*tmp;
@@ -29,8 +27,6 @@ void	rotate_a(t_stack **list_a, int flag)
 		ft_printf("ra\n");
 }
 
-/*desloca todos os elementos da pilha 'b' para cima em 1. O primeiro elemento
-se torna o último*/
 void	rotate_b(t_stack **list_b, int flag)
 {
 	t_stack	*tmp;
@@ -46,7 +42,6 @@ void	rotate_b(t_stack **list_b, int flag)
 		ft_printf("rb\n");
 }
 
-//Faz o rotate_a e rotate_b ao mesmo tempo
 void	ra_rb(t_stack **list_a, t_stack **list_b)
 {
 	rotate_a(list_a, 0);

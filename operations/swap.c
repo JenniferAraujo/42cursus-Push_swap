@@ -12,7 +12,6 @@
 
 #include "../push_swap.h"
 
-//troca os 2 primeiros elementos no to[p da pilha 'a'
 void	swap_a(t_stack **list_a, int flag)
 {
 	int	temp;
@@ -27,7 +26,6 @@ void	swap_a(t_stack **list_a, int flag)
 	}
 }
 
-//troca os 2 primeiros elementos no topo da pilha b.
 void	swap_b(t_stack **list_b, int flag)
 {
 	int	temp;
@@ -42,7 +40,6 @@ void	swap_b(t_stack **list_b, int flag)
 	}
 }
 
-//Faz o swap_a e swap_b ao mesmo tempo
 void	sa_sb(t_stack **list_a, t_stack **list_b)
 {
 	swap_a(list_a, 0);
